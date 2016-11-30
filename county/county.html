@@ -1,0 +1,40 @@
+<html>
+ <head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+	google.charts.load('current', {'packages': ['geochart', 'table', 'map', 'corechart']});
+    google.charts.setOnLoadCallback(drawVisualization);
+
+
+	var chart;
+
+	function drawVisualization() {
+		alert("Test")
+		  var data = google.visualization.arrayToDataTable([
+			['Country', 'Popularity'],
+			['AL-1B', 400],
+			['AL-4B', 500],
+			['AL-53', 600],
+			['AL-05', 800],
+			['AL-06', 100],
+			['AL-07', 800],
+			['AL-09', 400],
+			['AL-0A', 700]
+		  ]);
+		
+		google.visualization.GeoChart.setMapsSource('http://chrisdblumberg.com/maps')
+		  
+		  var geochart = new google.visualization.GeoChart(
+			  document.getElementById('visualization'));
+		  geochart.draw(data, {width: 556, height: 347, region:'US-AL', resolution: 'provinces', displayMode:'regions'});
+		  
+		  google.visualization.events.addListener(geochart, 'regionClick', function(r) {
+			console.log(r.region);
+		  });
+	}
+  </script>
+ </head>
+ <body>
+  <div id="visualization"></div>
+ </body>
+</html>
