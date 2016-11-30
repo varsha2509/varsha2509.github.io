@@ -4,12 +4,9 @@
   <script type="text/javascript">
 	google.charts.load('current', {'packages': ['geochart', 'table', 'map', 'corechart']});
     google.charts.setOnLoadCallback(drawVisualization);
-
-
 	var chart;
-
 	function drawVisualization() {
-		alert("Test")
+		alert("Hello. A state map of alabama should appear after this")
 		  var data = google.visualization.arrayToDataTable([
 			['Country', 'Popularity'],
 			['AL-1B', 400],
@@ -22,7 +19,7 @@
 			['AL-0A', 700]
 		  ]);
 		
-		google.visualization.GeoChart.setMapsSource('https://varsha2509.github.io/maps/')
+		google.visualization.GeoChart.setMapsSource('https://shridharama.github.io/maps/')
 		  
 		  var geochart = new google.visualization.GeoChart(
 			  document.getElementById('visualization'));
