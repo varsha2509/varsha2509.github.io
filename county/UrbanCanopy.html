@@ -7,7 +7,7 @@
 	var chart;
 	function drawVisualization() {
 		alert("Credits: Shridhar Ramachandran :)")
-		  var data1 = google.visualization.arrayToDataTable([
+		  var data5 = google.visualization.arrayToDataTable([
 			['County', 'FIPS'],
 [	'AL-01'	,	0.22	]	,
 [	'AL-02'	,	0.60	]	,
@@ -3120,7 +3120,7 @@
 [	'WY-17'	,	0.02	]
 			]);
 		  
-  var data2 = google.visualization.arrayToDataTable([
+  var data6 = google.visualization.arrayToDataTable([
 			['County', 'FIPS'],		
 [	'AL-01'	,	1.90	]	,
 [	'AL-02'	,	3.09	]	,
@@ -6234,7 +6234,7 @@
 		  ]);
 		
 			  
-var data3 = google.visualization.arrayToDataTable([
+var data7 = google.visualization.arrayToDataTable([
 		['County', 'FIPS'],
 [	'AL-01'	,	0.40	]	,
 [	'AL-02'	,	0.45	]	,
@@ -9347,7 +9347,7 @@ var data3 = google.visualization.arrayToDataTable([
 [	'WY-17'	,	0.18	]	
 		  ]);
 		
-var data4 = google.visualization.arrayToDataTable([
+var data8 = google.visualization.arrayToDataTable([
 			['County', 'FIPS'],	
 [	'AL-01'	,	0.27	]	,
 [	'AL-02'	,	0.43	]	,
@@ -12466,20 +12466,20 @@ google.visualization.GeoChart.setMapsSource('https://varsha2509.github.io/maps/'
 	
 		
 var geochart = new google.visualization.GeoChart(
-	 document.getElementById('visualization'));
-geochart.draw(data, {width: 556, height: 347, region:'US', resolution: 'provinces', displayMode:'regions'});
+	 document.getElementById('visualization5'));
+geochart.draw(data5, {width: 556, height: 347, region:'US', resolution: 'provinces', displayMode:'regions'});
 		
 var geochart = new google.visualization.GeoChart(
-	 document.getElementById('visualization2'));
-geochart.draw(data2, {width: 556, height: 347, region:'US', resolution: 'provinces', displayMode:'regions'});
+	 document.getElementById('visualization6'));
+geochart.draw(data6, {width: 556, height: 347, region:'US', resolution: 'provinces', displayMode:'regions'});
 
 var geochart = new google.visualization.GeoChart(
-	 document.getElementById('visualization3'));
-geochart.draw(data3, {width: 556, height: 347, region:'US', resolution: 'provinces', displayMode:'regions'});
+	 document.getElementById('visualization7'));
+geochart.draw(data7, {width: 556, height: 347, region:'US', resolution: 'provinces', displayMode:'regions'});
 		
 var geochart = new google.visualization.GeoChart(
-	 document.getElementById('visualization4'));
-geochart.draw(data4, {width: 556, height: 347, region:'US', resolution: 'provinces', displayMode:'regions'});
+	 document.getElementById('visualization8'));
+geochart.draw(data8, {width: 556, height: 347, region:'US', resolution: 'provinces', displayMode:'regions'});
 			  
  google.visualization.events.addListener(geochart, 'regionClick', function(r) {
 		console.log(r.region);
@@ -12490,19 +12490,19 @@ geochart.draw(data4, {width: 556, height: 347, region:'US', resolution: 'provinc
  <body>
 	 <h3> NO<sub>2</sub> Sequestration by Canopy in urban areas </h3>  
 	 This map represents NO<sub>2</sub> sequestration rate by canopy cover in urban areas in each county in units of g/m<sup>2</sup>. 
-  	<div id="visualization"></div>
+  	<div id="visualization5"></div>
 	 
 	  <h3> PM<sub>10</sub> Sequestration by Canopy in urban areas </h3>  
 	 This map represents PM<sub>10</sub> sequestration rate by canopy cover in urban areas in each county in units of g/m<sup>2</sup>. 
-  	<div id="visualization2"></div>
+  	<div id="visualization6"></div>
 	 
 	   <h3> SO<sub>2</sub> Sequestration by Canopy in urban areas </h3>  
 	 This map represents SO<sub>2</sub> sequestration rate by canopy cover in urban areas in each county in units of g/m<sup>2</sup>. 
-  	<div id="visualization3"></div>
+  	<div id="visualization7"></div>
 	 
 	  <h3> PM<sub>25</sub> Sequestration by Canopy in urban areas </h3>  
 	 This map represents PM<sub>25</sub> sequestration rate by canopy cover in urban areas in each county in units of g/m<sup>2</sup>. 
-  	<div id="visualization4"></div>
+  	<div id="visualization8"></div>
 	
  </body>
 </html>		
