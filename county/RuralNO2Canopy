@@ -3138,8 +3138,8 @@
   </script>
  </head>
  <body>
-	<h2> County FIPS </h2>  
-	 This map represents county FIPS.
+	<h2> NO2 Sequestration by Canopy in rural areas </h2>  
+	 This map represents NO2 sequestration rate by canopy cover in rural areas in each county. 
   	<div id="visualization"></div>
 	
  </body>
