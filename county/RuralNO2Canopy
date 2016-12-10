@@ -3137,7 +3137,7 @@
   </script>
  </head>
  <body>
-	<h2> County FIPS </h2>
+	<h2> County FIPS </h2>  
 	 This map represents county FIPS.
   	<div id="visualization"></div>
 	
