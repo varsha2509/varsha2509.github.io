@@ -8,7 +8,9 @@
 	function drawVisualization() {
 		alert("Credits: Shridhar Ramachandran :)")
 		  var data = google.visualization.arrayToDataTable([
-			['County' ,'FIPS', 'County Name'],
+			[{label:'County', type: 'string'},
+			 {label: 'FIPS', type: 'number'},
+			 {label:'County Name', type: 'string}],
 [	'AL-01'	,	1001	,	'Autauga'	]	,
 [	'AL-02'	,	1003	,	'Baldwin'	]	,
 [	'AL-03'	,	1005	,	'Barbour'	]	,
