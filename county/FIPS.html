@@ -9,8 +9,8 @@
 		alert("Credits: Shridhar Ramachandran :)")
 		  var data = google.visualization.arrayToDataTable([
 			['County','FIPS','Name'],
-[	'AL-01'	,	1001	,	'Autauga'	]	,
-[	'AL-02'	,	1003	,	'Baldwin'	]	,
+[	'AL-01'	,	1001	,	'Autauga']	,
+[	'AL-02'	,	1003	,	'Baldwin']	,
 [	'AL-03'	,	1005	,	'Barbour'	]	,
 [	'AL-04'	,	1007	,	'Bibb'	]	,
 [	'AL-05'	,	1009	,	'Blount'	]	,
@@ -3121,11 +3121,11 @@
 		  ]);
 		
 		google.visualization.GeoChart.setMapsSource('https://varsha2509.github.io/maps/')
-	
+		 
 		
 		  var geochart = new google.visualization.GeoChart(
 			  document.getElementById('visualization'));
-		  geochart.draw(data, {width: 556, height: 347, region:'US', resolution: 'provinces', displayMode:'regions'});
+		  geochart.draw(data, {width: 900, height: 500, region:'US', resolution: 'provinces', displayMode:'regions'});
 		  
 		  google.visualization.events.addListener(geochart, 'regionClick', function(r) {
 			console.log(r.region);
