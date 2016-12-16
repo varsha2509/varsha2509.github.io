@@ -2,9 +2,9 @@
  <head>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript">
-	google.load( 'visualization', '1', { 'packages': ['geochart'] } );
+	google.charts.load('current', {'packages': ['geochart', 'table', 'map', 'corechart']});
     google.charts.setOnLoadCallback(drawVisualization);
-	var chart;
+	var geochart;
 	function drawVisualization() {
 		//alert("Credits: Shridhar Ramachandran :)")
 		  var data15 = google.visualization.arrayToDataTable([
