@@ -3122,16 +3122,34 @@
 		
 		google.visualization.GeoChart.setMapsSource('https://varsha2509.github.io/maps/')
 		 
+		 var options = {
+       				 region: 'US',
+      				  displayMode: 'regions',
+			 	  resolustion: 'provinces',
+			 	  width: 556,
+			          height: 347,
+      				  colorAxis: {colors: ['green', 'blue']}
+     				 };
+		
+		
 		
 		  var geochart = new google.visualization.GeoChart(
-			  document.getElementById('visualization'));
-		   geochart.draw(data, {width: 556, height: 347, region:'US', resolution: 'provinces', displayMode:'regions'});
+			  document.getElementById('visualization15'));
+		   //geochart.draw(data, {width: 556, height: 347, region:'US', resolution: 'provinces', displayMode:'regions'});
 		  
-		 // var view = new google.visualization.DataView(data);
-		  //view.setColumns([0,1,2]);
-	          // chart is the geoChart, options is an object of chart options
-		  //chart.draw(view, {width: 900, height: 500, region:'US', resolution: 'provinces', displayMode:'regions'});
-		
+		var view = new google.visualization.DataView(data);
+		view.setColumns([0, {
+   				 type: 'number',
+   				 label: 'FIPS',
+   				 calc: function (dt, row) {
+        return {
+            v: dt.getValue(row, 1),
+            f: dt.getFormattedValue(row, 1)
+      		  }
+    								}
+				}]);
+
+		geochart.draw(view,options);	
 		  google.visualization.events.addListener(geochart, 'regionClick', function(r) {
 			console.log(r.region);
 		  });
@@ -3141,7 +3159,7 @@
  <body>
 	<h2> County FIPS </h2>
 	 This map represents county FIPS.
-  	<div id="visualization"></div>
+  	<div id="visualization15"></div>
 	
  </body>
 </html>
