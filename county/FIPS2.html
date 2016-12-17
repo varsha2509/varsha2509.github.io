@@ -12,7 +12,7 @@
     {
         // create data table
         var data = google.visualization.arrayToDataTable([
-            [ 'County', 'FIPS', 'Name' ],
+            [ 'County', '  ', 'Name' ],
 [	'AL-01'	,	1001	,	'Autauga'	]	,
 [	'AL-02'	,	1003	,	'Baldwin'	]	,
 [	'AL-03'	,	1005	,	'Barbour'	]	,
@@ -31,9 +31,9 @@
 
         // defines the data for the tooltip
         var formatter = new google.visualization.PatternFormat('{0}');
-       formatter.format( data, [1,2], 1 );
-     //   var formatter = new google.visualization.PatternFormat('{2}');
-      //  formatter.format( data, [0,1,2], 0 );
+        formatter.format( data, [0,1], 1 );
+        var formatter = new google.visualization.PatternFormat('{2}');
+        formatter.format( data, [0,1,2], 0 );
 
         // defines the data for the chart values
         var view = new google.visualization.DataView(data);
