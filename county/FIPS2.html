@@ -3,6 +3,7 @@
 
 <script type='text/javascript' src='https://www.google.com/jsapi'></script>
 <script type='text/javascript'>
+	// *** setting src="https://www.gstatic.com/charts/loader.js as source doesn't work **** //
 
     google.load( 'visualization', '1', { 'packages': ['geochart'] } );
     google.setOnLoadCallback( drawRegionsMap );
@@ -20,8 +21,10 @@
  	]);
 
 	 // set maps source
-	google.visualization.GeoChart.setMapsSource('https://varsha2509.github.io/maps/')
+	//google.visualization.GeoChart.setMapsSource('https://varsha2509.github.io/maps/')
 
+	//  ********** Setting this as a map source causes an error **********//    
+	    
         // create chart object
         var chart = new google.visualization.GeoChart(
             document.getElementById( 'chart_div' )
