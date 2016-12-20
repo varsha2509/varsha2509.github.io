@@ -4,13 +4,15 @@
 <script type='text/javascript' src='https://www.google.com/jsapi'></script>
 <script type='text/javascript'>
 	// *** setting src="https://www.gstatic.com/charts/loader.js as source doesn't work **** //
+
     google.load( 'visualization', '1', { 'packages': ['geochart'] } );
     google.setOnLoadCallback( drawRegionsMap );
+
     function drawRegionsMap()
     {
 		//alert("Credits: Shridhar Ramachandran :)")
 		  var data = google.visualization.arrayToDataTable([
-['County', 'Value' 'FIPS'],
+		['County', 'Value' 'FIPS'],
 [	'AL-01'	,	0.25	,	'Autauga'	]	,
 [	'AL-02'	,	0.61	,	'Baldwin'	]	,
 [	'AL-03'	,	1.27	,	'Barbour'	]	,
@@ -12471,10 +12473,13 @@ var data4 = google.visualization.arrayToDataTable([
 		
 	// set maps source
 	google.visualization.GeoChart.setMapsSource('https://varsha2509.github.io/maps/')
+
 	
 		//create chart object
-		var geochart = new google.visualization.GeoChart(
-	 		document.getElementById('visualization'));
+		// create chart object
+        var geochart = new google.visualization.GeoChart(
+            document.getElementById( 'visualization' )
+        );
 		//geochart.draw(data, {width: 556, height: 347, region:'US', resolution: 'provinces', displayMode:'regions'});
 		
 /* 	var geochart2 = new google.visualization.GeoChart(
@@ -12490,11 +12495,11 @@ var data4 = google.visualization.arrayToDataTable([
 		//geochart.draw(data4, {width: 556, height: 347, region:'US', resolution: 'provinces', displayMode:'regions'});
 		
 	     */
-	    	// defines the data for the tooltip
-        	var formatter = new google.visualization.PatternFormat('{0}');
-       			 formatter.format( data, [0,1], 1 );
-    		 var formatter = new google.visualization.PatternFormat('{2}');
-     			  formatter.format( data, [0,1,2], 0 );
+	    	 // defines the data for the tooltip
+        var formatter = new google.visualization.PatternFormat('{0}');
+        formatter.format( data, [0,1], 1 );
+       var formatter = new google.visualization.PatternFormat('{2}');
+       formatter.format( data, [0,1,2], 0 );
 	   	  /* // defines the data for the tooltip
         	var formatter = new google.visualization.PatternFormat('{0}');
        			 formatter.format( data2, [0,1], 1 );
@@ -12511,9 +12516,9 @@ var data4 = google.visualization.arrayToDataTable([
     		 var formatter = new google.visualization.PatternFormat('{2}');
      			  formatter.format( data4, [0,1,2], 0 );  */
 	    
-	    // defines the data for the chart values
-       		 var view = new google.visualization.DataView(data);
-       		 view.setColumns([0, 1]);
+	      // defines the data for the chart values
+        var view = new google.visualization.DataView(data);
+        view.setColumns([0, 1]);
 /* 	   var view2 = new google.visualization.DataView(data2);
        		 view2.setColumns([0, 1]);
 	  	 var view3 = new google.visualization.DataView(data3);
@@ -12524,8 +12529,8 @@ var data4 = google.visualization.arrayToDataTable([
 	     // set options for this chart
      		   var options =
        		 {
-         		   width:          556,
-	 		   height: 	    347,	
+         		  width:          556,
+				  height: 	    347,	
           		  region:         'US',
           		  resolution:     'provinces',
           		  colorAxis: { colors: ['#abdfdd', '#001a92'] }
@@ -12537,9 +12542,9 @@ var data4 = google.visualization.arrayToDataTable([
 	    		geochart4.draw(view4, options ); --> */
 
 	    
- 	//google.visualization.events.addListener(geochart, 'regionClick', function(r) {
-//			console.log(r.region);
-//			 });
+			google.visualization.events.addListener(geochart, 'regionClick', function(r) {
+					console.log(r.region);
+					});
 	}
   </script>
  </head>
