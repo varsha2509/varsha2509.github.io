@@ -12476,12 +12476,12 @@ var data4 = google.visualization.arrayToDataTable([
 
 	
 		//create chart object
-       /*  var chart	= new google.visualization.GeoChart(
+         var chart	= new google.visualization.GeoChart(
             document.getElementById( 'visualization' )
-        ); */
+        ); 
 		//geochart.draw(data, {width: 556, height: 347, region:'US', resolution: 'provinces', displayMode:'regions'});
 			
-		var chart = new google.visualization.GeoChart(
+		var chart2 = new google.visualization.GeoChart(
 	 		document.getElementById('visualization2')
 		);
 		//geochart.draw(data2, {width: 556, height: 347, region:'US', resolution: 'provinces', displayMode:'regions'});
@@ -12496,15 +12496,15 @@ var data4 = google.visualization.arrayToDataTable([
 		
 	     */
 	    	 // defines the data for the tooltip
-				/* var formatter = new google.visualization.PatternFormat('{0}');
+				var formatter = new google.visualization.PatternFormat('{0}');
 					formatter.format( data, [2,1], 2 );
 				var formatter = new google.visualization.PatternFormat('{2}');
-					formatter.format( data, [0,1,2], 0 ); */
+					formatter.format( data, [0,1,2], 0 );
 	   	   // defines the data for the tooltip
-				var formatter = new google.visualization.PatternFormat('{0}');
-					formatter.format( data2, [2,1], 2 );
-				var formatter = new google.visualization.PatternFormat('{2}');
-					formatter.format( data2, [0,1,2], 0 );
+				var formatter2 = new google.visualization.PatternFormat('{0}');
+					formatter2.format(data2, [2,1], 2 );
+				var formatter2 = new google.visualization.PatternFormat('{2}');
+					formatter2.format(data2, [0,1,2], 0 );
 	 /*   // defines the data for the tooltip
         	var formatter = new google.visualization.PatternFormat('{0}');
        			 formatter.format( data3, [0,1], 1 );
@@ -12517,10 +12517,10 @@ var data4 = google.visualization.arrayToDataTable([
      			  formatter.format( data4, [0,1,2], 0 );  */
 	    
 	      // defines the data for the chart values
-      /*   	var view = new google.visualization.DataView(data);
-				view.setColumns([0, 1]); */
-			var view = new google.visualization.DataView(data2);
+			var view = new google.visualization.DataView(data);
 				view.setColumns([0, 1]);
+			var view2 = new google.visualization.DataView(data2);
+				view2.setColumns([0, 1]);
 /*	  	 	var view3 = new google.visualization.DataView(data3);
        		 view3.setColumns([0, 1]);
 			var view4 = new google.visualization.DataView(data4);
@@ -12536,8 +12536,8 @@ var data4 = google.visualization.arrayToDataTable([
           		  colorAxis: { colors: ['#abdfdd', '#001a92'] }
        		 };
 	    // draw chart
-		        //chart.draw(view, options );
-	    	 	chart.draw(view, options );
+		        chart.draw(view, options );
+	    	 	chart.draw(view2, options );
 	    	/*	geochart3.draw(view3, options );
 	    		geochart4.draw(view4, options ); */
 
@@ -12549,9 +12549,9 @@ var data4 = google.visualization.arrayToDataTable([
   </script>
  </head>
  <body>   
-	<!--  <h3> NO<sub>2</sub> Sequestration by Canopy in rural areas </h3>  
+	  <h3> NO<sub>2</sub> Sequestration by Canopy in rural areas </h3>  
 	 This map represents NO<sub>2</sub> sequestration rate by canopy cover in rural areas in each county in units of g/m<sup>2</sup>. 
-  	<div id="visualization"></div>-->
+  	<div id="visualization"></div>
 	 
 	  <h3> PM<sub>10</sub> Sequestration by Canopy in rural areas </h3>  
 	 This map represents PM<sub>10</sub> sequestration rate by canopy cover in rural areas in each county in units of g/m<sup>2</sup>. 
