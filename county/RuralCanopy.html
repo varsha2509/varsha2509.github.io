@@ -12476,9 +12476,9 @@ var data4 = google.visualization.arrayToDataTable([
 
 	
 		//create chart object
-        var chart	= new google.visualization.GeoChart(
+       /*  var chart	= new google.visualization.GeoChart(
             document.getElementById( 'visualization' )
-        );
+        ); */
 		//geochart.draw(data, {width: 556, height: 347, region:'US', resolution: 'provinces', displayMode:'regions'});
 			
 		var chart2 = new google.visualization.GeoChart(
@@ -12496,10 +12496,10 @@ var data4 = google.visualization.arrayToDataTable([
 		
 	     */
 	    	 // defines the data for the tooltip
-				var formatter = new google.visualization.PatternFormat('{0}');
+				/* var formatter = new google.visualization.PatternFormat('{0}');
 					formatter.format( data, [2,1], 2 );
 				var formatter = new google.visualization.PatternFormat('{2}');
-					formatter.format( data, [0,1,2], 0 );
+					formatter.format( data, [0,1,2], 0 ); */
 	   	   // defines the data for the tooltip
 				var formatter2 = new google.visualization.PatternFormat('{0}');
 					formatter2.format( data2, [2,1], 2 );
@@ -12517,8 +12517,8 @@ var data4 = google.visualization.arrayToDataTable([
      			  formatter.format( data4, [0,1,2], 0 );  */
 	    
 	      // defines the data for the chart values
-        var view = new google.visualization.DataView(data);
-				view.setColumns([0, 1]);
+      /*   var view = new google.visualization.DataView(data);
+				view.setColumns([0, 1]); */
 		var view2 = new google.visualization.DataView(data2);
 				view2.setColumns([0, 1]);
 /*	  	 var view3 = new google.visualization.DataView(data3);
