@@ -10,7 +10,7 @@
 
     function drawRegionsMap()
     {
-		alert("Credits: Shridhar Ramachandran :)")
+		  alert("Credits: Shridhar Ramachandran :)")
 		  var data = google.visualization.arrayToDataTable([
 		[ 'CountyCode', 'Value', 'Name' ],
 [	'AL-01'	,	0.25	,	'Autauga'	]	,
@@ -12481,7 +12481,7 @@ var data4 = google.visualization.arrayToDataTable([
         ); */
 		//geochart.draw(data, {width: 556, height: 347, region:'US', resolution: 'provinces', displayMode:'regions'});
 			
-		var chart2 = new google.visualization.GeoChart(
+		var chart = new google.visualization.GeoChart(
 	 		document.getElementById('visualization2')
 		);
 		//geochart.draw(data2, {width: 556, height: 347, region:'US', resolution: 'provinces', displayMode:'regions'});
@@ -12501,29 +12501,29 @@ var data4 = google.visualization.arrayToDataTable([
 				var formatter = new google.visualization.PatternFormat('{2}');
 					formatter.format( data, [0,1,2], 0 ); */
 	   	   // defines the data for the tooltip
-				var formatter2 = new google.visualization.PatternFormat('{0}');
-					formatter2.format( data2, [2,1], 2 );
-				var formatter2 = new google.visualization.PatternFormat('{2}');
-					formatter2.format( data2, [0,1,2], 0 );
+				var formatter = new google.visualization.PatternFormat('{0}');
+					formatter.format( data2, [2,1], 2 );
+				var formatter = new google.visualization.PatternFormat('{2}');
+					formatter.format( data2, [0,1,2], 0 );
 	 /*   // defines the data for the tooltip
         	var formatter = new google.visualization.PatternFormat('{0}');
        			 formatter.format( data3, [0,1], 1 );
     		 var formatter = new google.visualization.PatternFormat('{2}');
      			  formatter.format( data3, [0,1,2], 0 );
 	    // defines the data for the tooltip
-        	var formatter = new google.visualization.PatternFormat('{0}');
+			var formatter = new google.visualization.PatternFormat('{0}');
        			 formatter.format( data4, [0,1], 1 );
     		 var formatter = new google.visualization.PatternFormat('{2}');
      			  formatter.format( data4, [0,1,2], 0 );  */
 	    
 	      // defines the data for the chart values
-      /*   var view = new google.visualization.DataView(data);
+      /*   	var view = new google.visualization.DataView(data);
 				view.setColumns([0, 1]); */
-		var view2 = new google.visualization.DataView(data2);
-				view2.setColumns([0, 1]);
-/*	  	 var view3 = new google.visualization.DataView(data3);
+			var view = new google.visualization.DataView(data2);
+				view.setColumns([0, 1]);
+/*	  	 	var view3 = new google.visualization.DataView(data3);
        		 view3.setColumns([0, 1]);
-	   	 var view4 = new google.visualization.DataView(data4);
+			var view4 = new google.visualization.DataView(data4);
        		 view4.setColumns([0, 1]); */
 	    
 	     // set options for this chart
@@ -12537,7 +12537,7 @@ var data4 = google.visualization.arrayToDataTable([
        		 };
 	    // draw chart
 		        //chart.draw(view, options );
-	    	 	chart2.draw(view2, options );
+	    	 	chart.draw(view2, options );
 	    	/*	geochart3.draw(view3, options );
 	    		geochart4.draw(view4, options ); */
 
