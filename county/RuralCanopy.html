@@ -3121,10 +3121,42 @@
 [	'WY-14'	,	0.28	,	'Teton'	]	,
 [	'WY-15'	,	0.13	,	'Uinta'	]	,
 [	'WY-16'	,	0.09	,	'Washakie'	]	,
-[	'WY-17'	,	0.57	,	'Weston'	]	
-
-			  
+[	'WY-17'	,	0.57	,	'Weston'	]	  
 		  ]);
+	    
+//create chart object
+         var chart	= new google.visualization.GeoChart(
+      		          document.getElementById( 'visualization' )
+        		); 
+	    
+// defines the data for the tooltip
+	var formatter = new google.visualization.PatternFormat('{0}');
+			formatter.format( data, [2,1], 2 );
+//	
+	var formatter = new google.visualization.PatternFormat('{2}');
+			formatter.format( data, [0,1,2], 0 );	    
+ // defines the data for the chart values
+	var view = new google.visualization.DataView(data);
+			view.setColumns([0, 1]);
+	    
+ // set options for this chart
+        var options =
+       		 {
+         		  width:          556,
+				  height: 	    347,	
+          		  region:         'US',
+          		  resolution:     'provinces',
+          		  colorAxis: { colors: ['#abdfdd', '#001a92'] }
+       		 };
+	    
+// draw chart
+	chart.draw(view, options );
+	    
+	    
+	google.visualization.events.addListener(geochart, 'regionClick', function(r) {
+					console.log(r.region);
+					});
+	}
 		
 /*		
  var data2 = google.visualization.arrayToDataTable([
@@ -12471,14 +12503,10 @@ var data4 = google.visualization.arrayToDataTable([
 		]); */
 		
 		
-	// set maps source
-	google.visualization.GeoChart.setMapsSource('https://varsha2509.github.io/maps/')
+	
 
 	
-		//create chart object
-         var chart	= new google.visualization.GeoChart(
-            document.getElementById( 'visualization' )
-        ); 
+	
 		//geochart.draw(data, {width: 556, height: 347, region:'US', resolution: 'provinces', displayMode:'regions'});
 			
 	//	var chart2 = new google.visualization.GeoChart(
@@ -12495,12 +12523,8 @@ var data4 = google.visualization.arrayToDataTable([
 		//geochart.draw(data4, {width: 556, height: 347, region:'US', resolution: 'provinces', displayMode:'regions'});
 		
 	     */
-	    	 // defines the data for the tooltip
-				var formatter = new google.visualization.PatternFormat('{0}');
-					formatter.format( data, [2,1], 2 );
-			//		formatter.format( data2, [2,1], 2 );
-				var formatter = new google.visualization.PatternFormat('{2}');
-					formatter.format( data, [0,1,2], 0 );
+	    	
+			
 			//		formatter.format( data2, [0,1,2], 0 );
 	   	/*    // defines the data for the tooltip
 				var formatter2 = new google.visualization.PatternFormat('{0}');
@@ -12518,9 +12542,7 @@ var data4 = google.visualization.arrayToDataTable([
     		 var formatter = new google.visualization.PatternFormat('{2}');
      			  formatter.format( data4, [0,1,2], 0 );  */
 	    
-	      // defines the data for the chart values
-			var view = new google.visualization.DataView(data);
-				view.setColumns([0, 1]);
+	    
 		//	var view2 = new google.visualization.DataView(data2);
 			//	view2.setColumns([0, 1]);
 /*	  	 	var view3 = new google.visualization.DataView(data3);
@@ -12528,26 +12550,14 @@ var data4 = google.visualization.arrayToDataTable([
 			var view4 = new google.visualization.DataView(data4);
        		 view4.setColumns([0, 1]); */
 	    
-	     // set options for this chart
-     		   var options =
-       		 {
-         		  width:          556,
-				  height: 	    347,	
-          		  region:         'US',
-          		  resolution:     'provinces',
-          		  colorAxis: { colors: ['#abdfdd', '#001a92'] }
-       		 };
-	    // draw chart
-		        chart.draw(view, options );
+	   
+	
 	    	 //	chart2.draw(view2, options );
 	    	/*	geochart3.draw(view3, options );
 	    		geochart4.draw(view4, options ); */
 
 	    
-			google.visualization.events.addListener(geochart, 'regionClick', function(r) {
-					console.log(r.region);
-					});
-	}
+			
   </script>
  </head>
  <body>   
