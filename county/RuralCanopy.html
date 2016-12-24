@@ -3161,8 +3161,12 @@
 					});
 	}
 		
-/*		
- var data2 = google.visualization.arrayToDataTable([
+	google.setOnLoadCallback( drawRegionsMap2 );
+
+    function drawRegionsMap2()
+    {
+		  alert("Credits: Shridhar Ramachandran :)")
+		 var data2 = google.visualization.arrayToDataTable([
 ['County', 'Value' 'FIPS'],
 [	'AL-01'	,	2.44	,	'Autauga'	]	,
 [	'AL-02'	,	3.17	,	'Baldwin'	]	,
@@ -6274,7 +6278,44 @@
 [	'WY-16'	,	0.50	,	'Washakie'	]	,
 [	'WY-17'	,	3.12	,	'Weston'	]	
 		]);
-*/		 
+		 
+	    
+// set chart source
+	 google.visualization.GeoChart.setMapsSource('https://varsha2509.github.io/maps/')
+	    
+//create chart object
+         var chart2	= new google.visualization.GeoChart(
+      		          document.getElementById( 'visualization2' )
+        		); 
+	    
+// defines the data for the tooltip
+	var formatter = new google.visualization.PatternFormat('{0}');
+			formatter.format( data2, [2,1], 2 );
+//	
+	var formatter = new google.visualization.PatternFormat('{2}');
+			formatter.format( data2, [0,1,2], 0 );	    
+ // defines the data for the chart values
+	var view2 = new google.visualization.DataView(data2);
+			view2.setColumns([0, 1]);
+	    
+ // set options for this chart
+        var options =
+       		 {
+         		  width:          556,
+				  height: 	    347,	
+          		  region:         'US',
+          		  resolution:     'provinces',
+          		  colorAxis: { colors: ['#abdfdd', '#001a92'] }
+       		 };
+	    
+// draw chart
+	chart2.draw(view2, options );
+	    
+	    
+	google.visualization.events.addListener(chart2, 'regionClick', function(r) {
+					console.log(r.region);
+					});
+	}	    
 		
 /*var data3 = google.visualization.arrayToDataTable([
 ['County', 'Value' 'FIPS'],	
@@ -12568,9 +12609,9 @@ var data4 = google.visualization.arrayToDataTable([
 	 This map represents NO<sub>2</sub> sequestration rate by canopy cover in rural areas in each county in units of g/m<sup>2</sup>. 
   	<div id="visualization"></div>
 	 
-	<!--   <h3> PM<sub>10</sub> Sequestration by Canopy in rural areas </h3>  
+	   <h3> PM<sub>10</sub> Sequestration by Canopy in rural areas </h3>  
 	 This map represents PM<sub>10</sub> sequestration rate by canopy cover in rural areas in each county in units of g/m<sup>2</sup>. 
-  	<div id="visualization2"></div> -->
+  	<div id="visualization2"></div>
 	 
 	<!--    <h3> SO<sub>2</sub> Sequestration by Canopy in rural areas </h3>  
 	 This map represents SO<sub>2</sub> sequestration rate by canopy cover in rural areas in each county in units of g/m<sup>2</sup>. 
