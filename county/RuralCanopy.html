@@ -3161,12 +3161,12 @@
 					});
 	}
 		
-	google.setOnLoadCallback( drawRegionsMap2 );
+google.setOnLoadCallback( drawRegionsMap2 );
 
     function drawRegionsMap2()
     {
 		  alert("Credits: Shridhar Ramachandran :)")
-		 var data2 = google.visualization.arrayToDataTable([
+var data2 = google.visualization.arrayToDataTable([
 ['County', 'Value' 'FIPS'],
 [	'AL-01'	,	2.44	,	'Autauga'	]	,
 [	'AL-02'	,	3.17	,	'Baldwin'	]	,
@@ -6284,7 +6284,7 @@
 	 google.visualization.GeoChart.setMapsSource('https://varsha2509.github.io/maps/')
 	    
 //create chart object
-         var chart	= new google.visualization.GeoChart(
+         var chart2	= new google.visualization.GeoChart(
       		          document.getElementById( 'visualization2' )
         		); 
 	    
@@ -6295,8 +6295,8 @@
 	var formatter = new google.visualization.PatternFormat('{2}');
 			formatter.format( data2, [0,1,2], 0 );	    
  // defines the data for the chart values
-	var view = new google.visualization.DataView(data2);
-			view.setColumns([0, 1]);
+	var view2 = new google.visualization.DataView(data2);
+			view2.setColumns([0, 1]);
 	    
  // set options for this chart
         var options =
@@ -6309,7 +6309,7 @@
        		 };
 	    
 // draw chart
-	chart.draw(view, options );
+	chart2.draw(view2, options );
 	    
 	    
 	google.visualization.events.addListener(geochart, 'regionClick', function(r) {
