@@ -5,8 +5,9 @@
 <script type='text/javascript'>
 	// *** setting src="https://www.gstatic.com/charts/loader.js as source doesn't work **** //
 
-    google.load( 'visualization', '1', { 'packages': ['geochart'] } );
-    google.setOnLoadCallback( drawRegionsMap );
+    google.load( 'current', '1', { 'packages': ['geochart'] } );
+    google.charts.setOnLoadCallback( drawRegionsMap );
+    google.charts.setOnLoadCallback( drawRegionsMap2 );
 
     function drawRegionsMap()
     {
@@ -3156,13 +3157,13 @@
 	chart.draw(view, options );
 	    
 	    
-	google.visualization.events.addListener(geochart, 'regionClick', function(r) {
-					console.log(r.region);
-					});
+	//google.visualization.events.addListener(geochart, 'regionClick', function(r) {
+	//				console.log(r.region);
+//					});
 	}
 		
 
-google.setOnLoadCallback( drawRegionsMap2 );
+
 
     function drawRegionsMap2()
     {
@@ -6279,6 +6280,8 @@ var data2 = google.visualization.arrayToDataTable([
 [	'WY-16'	,	0.50	,	'Washakie'	]	,
 [	'WY-17'	,	3.12	,	'Weston'	]	
 		]);
+// set chart source
+	 google.visualization.GeoChart.setMapsSource('https://varsha2509.github.io/maps/')
 		 
 	    
 	    
@@ -6310,9 +6313,9 @@ var data2 = google.visualization.arrayToDataTable([
 	    
 // draw chart
 	chart2.draw(view2, options );
-	google.visualization.events.addListener(geochart, 'regionClick', function(r) {
-					console.log(r.region);
-					});
+//	google.visualization.events.addListener(geochart, 'regionClick', function(r) {
+					//console.log(r.region);
+					//});
 	}	    
 	
 /*var data3 = google.visualization.arrayToDataTable([
