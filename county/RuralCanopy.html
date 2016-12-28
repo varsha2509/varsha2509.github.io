@@ -5,7 +5,7 @@
 <script type='text/javascript'>
 	// *** setting src="https://www.gstatic.com/charts/loader.js as source doesn't work **** //
 
-    google.load( 'visualization', '1', { 'packages': ['geochart'] } );
+    google.charts.load( 'current',  { 'packages': ['geochart'] } );
     google.charts.setOnLoadCallback( drawRegionsMap );
     google.charts.setOnLoadCallback( drawRegionsMap2 );
 
@@ -6291,11 +6291,11 @@ var data2 = google.visualization.arrayToDataTable([
         		); 
 	    
 // defines the data for the tooltip
-	var formatter2 = new google.visualization.PatternFormat('{0}');
-			formatter2.format( data2, [2,1], 2 );
+	var formatter = new google.visualization.PatternFormat('{0}');
+			formatter.format( data2, [2,1], 2 );
 //	
-	var formatter2 = new google.visualization.PatternFormat('{2}');
-			formatter2.format( data2, [0,1,2], 0 );	    
+	var formatter = new google.visualization.PatternFormat('{2}');
+			formatter.format( data2, [0,1,2], 0 );	    
 
  // defines the data for the chart values
 	var view2 = new google.visualization.DataView(data2);
