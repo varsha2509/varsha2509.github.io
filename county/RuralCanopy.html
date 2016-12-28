@@ -3162,11 +3162,13 @@
 	}
 		
 
+
 google.load( 'visualization', '1', { 'packages': ['geochart'] } );
 google.setOnLoadCallback( drawRegionsMap2 );
 
     function drawRegionsMap2()
     {
+		  
 var data2 = google.visualization.arrayToDataTable([
 ['County', 'Value' 'FIPS'],
 [	'AL-01'	,	2.44	,	'Autauga'	]	,
@@ -6315,7 +6317,8 @@ var data2 = google.visualization.arrayToDataTable([
 	google.visualization.events.addListener(geochart, 'regionClick', function(r) {
 					console.log(r.region);
 					});
-	}	    		
+	}	    
+	
 /*var data3 = google.visualization.arrayToDataTable([
 ['County', 'Value' 'FIPS'],	
 [	'AL-01'	,	0.44	,	'Autauga'	]	,
@@ -12608,9 +12611,9 @@ var data4 = google.visualization.arrayToDataTable([
 	 This map represents NO<sub>2</sub> sequestration rate by canopy cover in rural areas in each county in units of g/m<sup>2</sup>. 
   	<div id="visualization"></div>
 	 
-	<!--   <h3> PM<sub>10</sub> Sequestration by Canopy in rural areas </h3>  
+	   <h3> PM<sub>10</sub> Sequestration by Canopy in rural areas </h3>  
 	 This map represents PM<sub>10</sub> sequestration rate by canopy cover in rural areas in each county in units of g/m<sup>2</sup>. 
-  	<div id="visualization2"></div>-->
+  	<div id="visualization2"></div>
 	 
 	<!--    <h3> SO<sub>2</sub> Sequestration by Canopy in rural areas </h3>  
 	 This map represents SO<sub>2</sub> sequestration rate by canopy cover in rural areas in each county in units of g/m<sup>2</sup>. 
