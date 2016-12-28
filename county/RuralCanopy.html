@@ -3162,8 +3162,6 @@
 	}
 		
 
-
-google.load( 'visualization', '1', { 'packages': ['geochart'] } );
 google.setOnLoadCallback( drawRegionsMap2 );
 
     function drawRegionsMap2()
@@ -6290,11 +6288,11 @@ var data2 = google.visualization.arrayToDataTable([
         		); 
 	    
 // defines the data for the tooltip
-	var formatter = new google.visualization.PatternFormat('{0}');
-			formatter.format( data2, [2,1], 2 );
+	var formatter2 = new google.visualization.PatternFormat('{0}');
+			formatter2.format( data2, [2,1], 2 );
 //	
-	var formatter = new google.visualization.PatternFormat('{2}');
-			formatter.format( data2, [0,1,2], 0 );	    
+	var formatter2 = new google.visualization.PatternFormat('{2}');
+			formatter2.format( data2, [0,1,2], 0 );	    
 
  // defines the data for the chart values
 	var view2 = new google.visualization.DataView(data2);
@@ -6312,8 +6310,6 @@ var data2 = google.visualization.arrayToDataTable([
 	    
 // draw chart
 	chart2.draw(view2, options );
-	    
-	    
 	google.visualization.events.addListener(geochart, 'regionClick', function(r) {
 					console.log(r.region);
 					});
