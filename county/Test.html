@@ -70,6 +70,74 @@
         chart.draw( view, options );
 
     };
+    
+    google.setOnLoadCallback( drawRegionsMap2 );
+
+    function drawRegionsMap2()
+    {
+
+        // create data table
+        var data2 = google.visualization.arrayToDataTable([
+            [ 'State', 'in', 'String' ],
+            [ 'Arizona', 2, 'Has Facility, Sells Direct' ],
+            [ 'California', 4, 'Has Facility, Has Distributor, Sells Direct' ],
+            [ 'Colorado', 1, 'Sells Direct' ],
+            [ 'Florida', 1, 'Has Distributor' ],
+            [ 'Georgia', 1, 'Has Distributor' ],
+            [ 'Idaho', 1, 'Sells Direct' ],
+            [ 'Illinois', 1, 'Has Distributor' ],
+            [ 'Indiana', 1, 'Has Distributor' ],
+            [ 'Iowa', 1, 'Has Distributor' ],
+            [ 'Kansas', 1, 'Has Distributor' ],
+            [ 'Kentucky', 1, 'Has Distributor' ],
+            [ 'Louisiana', 1, 'Has Distributor' ],
+            [ 'Maryland', 2, 'Has Distributor' ],
+            [ 'Montana', 1, 'Sells Direct' ],
+            [ 'Nevada', 2, 'Has Facility, Sells Direct' ],
+            [ 'New Mexico', 2, 'Has Facility, Sells Direct' ],
+            [ 'North Carolina', 1, 'Has Distributor' ],
+            [ 'North Dakota', 1, 'Has Distributor' ],
+            [ 'Oklahoma', 1, 'Sells Direct' ],
+            [ 'Oregon', 1, 'Sells Direct' ],
+            [ 'Pennsylvania', 1, 'Has Distributor' ],
+            [ 'South Carolina', 1, 'Has Distributor' ],
+            [ 'Tennessee', 1, 'Has Distributor' ],
+            [ 'Texas', 1, 'Has Distributor' ],
+            [ 'Utah', 2, 'Has Facility, Sells Direct' ],
+            [ 'Washington', 1, 'Sells Direct' ],
+            [ 'Wyoming', 1, 'Sells Direct' ],       ]);
+
+        // create chart object
+        var chart2 = new google.visualization.GeoChart(
+            document.getElementById( 'chart_div2' )
+        );
+
+        // defines the data for the tooltip
+        var formatter = new google.visualization.PatternFormat('{0}');
+        formatter.format( data2, [0,1], 1 );
+        var formatter = new google.visualization.PatternFormat('{2}');
+        formatter.format( data2, [0,1,2], 0 );
+
+        // defines the data for the chart values
+        var view2 = new google.visualization.DataView(data2);
+        view2.setColumns([0, 1]);
+
+        // set options for this chart
+        var options =
+        {
+            width:          286,
+            region:         'US',
+            resolution:     'provinces',
+            colorAxis: { colors: ['#abdfab', '#006600'] },
+            legend: 'none'
+        };
+
+        // draw chart
+        chart2.draw( view2, options );
+
+    };
+    
+    
 
  </script>
  </head>
@@ -77,5 +145,6 @@
 
 
 <div id="chart_div" style="width: 286px; height: 180px;"></div>
+ <div id="chart_div2" style="width: 286px; height: 180px;"></div>
 </body>
 </html>
