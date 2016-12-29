@@ -11,8 +11,8 @@
     function drawRegionsMap()
     {
 		  alert("Credits: Shridhar Ramachandran :)")
-		  var data = google.visualization.arrayToDataTable([
-		[ 'CountyCode', 'Value', 'Name' ],
+	var data = google.visualization.arrayToDataTable([
+[ 'CountyCode', 'Value', 'Name' ],
 [	'AL-01'	,	0.25	,	'Autauga'	]	,
 [	'AL-02'	,	0.61	,	'Baldwin'	]	,
 [	'AL-03'	,	1.27	,	'Barbour'	]	,
@@ -12470,7 +12470,6 @@ var data4 = google.visualization.arrayToDataTable([
 	 google.visualization.GeoChart.setMapsSource('https://varsha2509.github.io/maps/')
 		 
 	    
-	    
 //create chart object
         var chart	= new google.visualization.GeoChart(
       		          document.getElementById( 'chart_div' )
@@ -12488,27 +12487,27 @@ var data4 = google.visualization.arrayToDataTable([
 				
 // defines the data for the tooltip
 	var formatter = new google.visualization.PatternFormat('{0}');
-			formatter.format( data, [2,1], 2 );
+			formatter.format( data, [0,1], 1);
 //	
 	var formatter = new google.visualization.PatternFormat('{2}');
 			formatter.format( data, [0,1,2], 0 );
 
 // Data 2
 	var formatter = new google.visualization.PatternFormat('{0}');
-			formatter.format( data2, [2,1], 2 );
+			formatter.format( data2, [0,1], 1 );
 //	
 	var formatter = new google.visualization.PatternFormat('{2}');
 			formatter.format( data2, [0,1,2], 0 );
 			
 // Data 3
 	var formatter = new google.visualization.PatternFormat('{0}');
-			formatter.format( data3, [2,1], 2 );
+			formatter.format( data3, [0,1], 1 );
 //	
 	var formatter = new google.visualization.PatternFormat('{2}');
 			formatter.format( data3, [0,1,2], 0 );
 // Data 4
 	var formatter = new google.visualization.PatternFormat('{0}');
-			formatter.format( data4, [2,1], 2 );
+			formatter.format( data4, [0,1], 1 );
 //	
 	var formatter = new google.visualization.PatternFormat('{2}');
 			formatter.format( data4, [0,1,2], 0 );			
@@ -12565,9 +12564,9 @@ var data4 = google.visualization.arrayToDataTable([
 	chart3.draw(view3, options3);
 	chart4.draw(view4, options4);
 	
-//	google.visualization.events.addListener(geochart, 'regionClick', function(r) {
-					//console.log(r.region);
-					//});
+	google.visualization.events.addListener(geochart, 'regionClick', function(r) {
+					console.log(r.region);
+					});
 	}	    
 	
 		
