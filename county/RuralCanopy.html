@@ -12470,13 +12470,56 @@ var data2 = google.visualization.arrayToDataTable([
 	 google.visualization.GeoChart.setMapsSource('https://varsha2509.github.io/maps/')
 		 
 	    
-//create chart object
+//create chart object - Data
         var chart = new google.visualization.GeoChart(
             document.getElementById( 'chart_div' )
         );
-		var chart2	= new google.visualization.GeoChart(
+		
+// defines the data for the tooltip
+	var formatter = new google.visualization.PatternFormat('{0}');
+			formatter.format( data, [0,1], 1);	
+	var formatter = new google.visualization.PatternFormat('{2}');
+			formatter.format( data, [0,1,2], 0 );	
+ // defines the data for the chart values
+	var view = new google.visualization.DataView(data);
+			view.setColumns([0, 1]);
+
+			
+ // set options for this chart
+        var options =
+       		 {
+         		  width:          556,
+				  height:   	    347,	
+          		  region:         'US',
+          		  resolution:     'provinces',
+          		  colorAxis: { colors: ['#abdfdd', '#001a92'] }
+       		 };			
+		
+		
+//create chart object - Data2		
+	var chart2	= new google.visualization.GeoChart(
       		          document.getElementById( 'chart_div2' )
-        		); 		
+        		); 
+
+// Data 2
+	var formatter = new google.visualization.PatternFormat('{0}');
+			formatter.format( data2, [0,1], 1 );
+	var formatter = new google.visualization.PatternFormat('{2}');
+			formatter.format( data2, [0,1,2], 0 );				
+
+// Data2			
+	var view2 = new google.visualization.DataView(data2);
+			view2.setColumns([0, 1]);
+
+	var options2 =
+       		 {
+         		  width:          556,
+				  height:   	    347,	
+          		  region:         'US',
+          		  resolution:     'provinces',
+          		  colorAxis: { colors: ['#abdfdd', '#001a92'] }
+       		 };				
+				
 	    /*var chart3	= new google.visualization.GeoChart(
       		          document.getElementById( 'chart_div3' )
         		);
@@ -12485,19 +12528,9 @@ var data2 = google.visualization.arrayToDataTable([
       		          document.getElementById( 'chart_div4' )
         		);*/ 		
 				
-// defines the data for the tooltip
-	var formatter = new google.visualization.PatternFormat('{0}');
-			formatter.format( data, [0,1], 1);
-//	
-	var formatter = new google.visualization.PatternFormat('{2}');
-			formatter.format( data, [0,1,2], 0 );
 
-// Data 2
-	var formatter = new google.visualization.PatternFormat('{0}');
-			formatter.format( data2, [0,1], 1 );
-//	
-	var formatter = new google.visualization.PatternFormat('{2}');
-			formatter.format( data2, [0,1,2], 0 );
+
+
 			
 // Data 3
 	/*var formatter = new google.visualization.PatternFormat('{0}');
@@ -12512,36 +12545,16 @@ var data2 = google.visualization.arrayToDataTable([
 	var formatter = new google.visualization.PatternFormat('{2}');
 			formatter.format( data4, [0,1,2], 0 );			*/
 
- // defines the data for the chart values
-	var view = new google.visualization.DataView(data);
-			view.setColumns([0, 1]);		
-// Data2			
-	var view2 = new google.visualization.DataView(data2);
-			view2.setColumns([0, 1]);		
+		
+	
 /*// Data3			
 	var view3 = new google.visualization.DataView(data3);
 			view3.setColumns([0, 1]);
 // Data4			
 	var view4 = new google.visualization.DataView(data4);
 			view4.setColumns([0, 1]);			*/
-			
- // set options for this chart
-        var options =
-       		 {
-         		  width:          556,
-				  height:   	    347,	
-          		  region:         'US',
-          		  resolution:     'provinces',
-          		  colorAxis: { colors: ['#abdfdd', '#001a92'] }
-       		 };
-		var options2 =
-       		 {
-         		  width:          556,
-				  height:   	    347,	
-          		  region:         'US',
-          		  resolution:     'provinces',
-          		  colorAxis: { colors: ['#abdfdd', '#001a92'] }
-       		 };	 
+
+		 
 		/*var options3 =
        		 {
          		  width:          556,
