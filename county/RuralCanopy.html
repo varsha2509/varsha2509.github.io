@@ -6237,7 +6237,7 @@ var data2 = google.visualization.arrayToDataTable([
 [	'WY-17'	,	3.12	,	'Weston'	]	
 		]);
 		
-var data3 = google.visualization.arrayToDataTable([
+/*var data3 = google.visualization.arrayToDataTable([
 ['County', 'Value' 'FIPS'],	
 [	'AL-01'	,	0.44	,	'Autauga'	]	,
 [	'AL-02'	,	0.45	,	'Baldwin'	]	,
@@ -9350,9 +9350,9 @@ var data3 = google.visualization.arrayToDataTable([
 [	'WY-17'	,	0.20	,	'Weston'	]	
 
  
-		]);
+		]);*/
 		
-var data4 = google.visualization.arrayToDataTable([
+/*var data4 = google.visualization.arrayToDataTable([
 ['County', 'Value' 'FIPS'],			
 [	'AL-01'	,	0.37	,	'Autauga'	]	,
 [	'AL-02'	,	0.44	,	'Baldwin'	]	,
@@ -12464,26 +12464,26 @@ var data4 = google.visualization.arrayToDataTable([
 [	'WY-16'	,	0.08	,	'Washakie'	]	,
 [	'WY-17'	,	0.16	,	'Weston'	]	
 		
-		]);	
+		]);	*/
 		
 // set chart source
 	 google.visualization.GeoChart.setMapsSource('https://varsha2509.github.io/maps/')
 		 
 	    
 //create chart object
-        var chart	= new google.visualization.GeoChart(
-      		          document.getElementById( 'chart_div' )
-        		); 
+        var chart = new google.visualization.GeoChart(
+            document.getElementById( 'chart_div' )
+        );
 		var chart2	= new google.visualization.GeoChart(
       		          document.getElementById( 'chart_div2' )
         		); 		
-	    var chart3	= new google.visualization.GeoChart(
+	    /*var chart3	= new google.visualization.GeoChart(
       		          document.getElementById( 'chart_div3' )
         		);
 
 		var chart4	= new google.visualization.GeoChart(
       		          document.getElementById( 'chart_div4' )
-        		); 		
+        		);*/ 		
 				
 // defines the data for the tooltip
 	var formatter = new google.visualization.PatternFormat('{0}');
@@ -12500,7 +12500,7 @@ var data4 = google.visualization.arrayToDataTable([
 			formatter.format( data2, [0,1,2], 0 );
 			
 // Data 3
-	var formatter = new google.visualization.PatternFormat('{0}');
+	/*var formatter = new google.visualization.PatternFormat('{0}');
 			formatter.format( data3, [0,1], 1 );
 //	
 	var formatter = new google.visualization.PatternFormat('{2}');
@@ -12510,7 +12510,7 @@ var data4 = google.visualization.arrayToDataTable([
 			formatter.format( data4, [0,1], 1 );
 //	
 	var formatter = new google.visualization.PatternFormat('{2}');
-			formatter.format( data4, [0,1,2], 0 );			
+			formatter.format( data4, [0,1,2], 0 );			*/
 
  // defines the data for the chart values
 	var view = new google.visualization.DataView(data);
@@ -12518,12 +12518,12 @@ var data4 = google.visualization.arrayToDataTable([
 // Data2			
 	var view2 = new google.visualization.DataView(data2);
 			view2.setColumns([0, 1]);		
-// Data3			
+/*// Data3			
 	var view3 = new google.visualization.DataView(data3);
 			view3.setColumns([0, 1]);
 // Data4			
 	var view4 = new google.visualization.DataView(data4);
-			view4.setColumns([0, 1]);			
+			view4.setColumns([0, 1]);			*/
 			
  // set options for this chart
         var options =
@@ -12542,7 +12542,7 @@ var data4 = google.visualization.arrayToDataTable([
           		  resolution:     'provinces',
           		  colorAxis: { colors: ['#abdfdd', '#001a92'] }
        		 };	 
-		var options3 =
+		/*var options3 =
        		 {
          		  width:          556,
 				  height:   	    347,	
@@ -12557,12 +12557,12 @@ var data4 = google.visualization.arrayToDataTable([
           		  region:         'US',
           		  resolution:     'provinces',
           		  colorAxis: { colors: ['#abdfdd', '#001a92'] }
-       		 };
+       		 };*/
 // draw chart
 	chart.draw(view, options);
 	chart2.draw(view2, options2);
-	chart3.draw(view3, options3);
-	chart4.draw(view4, options4);
+	/*chart3.draw(view3, options3);
+	chart4.draw(view4, options4);*/
 	
 	google.visualization.events.addListener(geochart, 'regionClick', function(r) {
 					console.log(r.region);
@@ -12582,13 +12582,13 @@ var data4 = google.visualization.arrayToDataTable([
 	 This map represents PM<sub>10</sub> sequestration rate by canopy cover in rural areas in each county in units of g/m<sup>2</sup>. 
   	<div id="chart_div2"></div>
 	 
-	  <h3> SO<sub>2</sub> Sequestration by Canopy in rural areas </h3>  
+	  <!-- <h3> SO<sub>2</sub> Sequestration by Canopy in rural areas </h3>  
 	 This map represents SO<sub>2</sub> sequestration rate by canopy cover in rural areas in each county in units of g/m<sup>2</sup>. 
   	<div id="chart_div3"></div>
 	 
 	  <h3> PM<sub>25</sub> Sequestration by Canopy in rural areas </h3>  
 	 This map represents PM<sub>25</sub> sequestration rate by canopy cover in rural areas in each county in units of g/m<sup>2</sup>. 
-  	<div id="chart_div4"></div> 
+  	<div id="chart_div4"></div>  -->
 	
  </body>
 </html>
