@@ -5,7 +5,7 @@
 <script type='text/javascript'>
 
     google.load( 'visualization', '1.1', { 'packages': ['geochart'] } );
-  /*  google.setOnLoadCallback( drawRegionsMap );
+  google.setOnLoadCallback( drawRegionsMap );
 
     function drawRegionsMap()
     {
@@ -41,41 +41,7 @@
             [ 'Washington', 1, 'Sells Direct' ],
             [ 'Wyoming', 1, 'Sells Direct' ],       ]);
 
-        // create chart object
-        var chart = new google.visualization.GeoChart(
-            document.getElementById( 'chart_div' )
-        );
-
-        // defines the data for the tooltip
-        var formatter = new google.visualization.PatternFormat('{0}');
-        formatter.format( data, [0,1], 1 );
-        var formatter = new google.visualization.PatternFormat('{2}');
-        formatter.format( data, [0,1,2], 0 );
-
-        // defines the data for the chart values
-        var view = new google.visualization.DataView(data);
-        view.setColumns([0, 1]);
-
-        // set options for this chart
-        var options =
-        {
-            width:          286,
-            region:         'US',
-            resolution:     'provinces',
-            colorAxis: { colors: ['#abdfab', '#006600'] },
-            legend: 'none'
-        };
-
-        // draw chart
-        chart.draw( view, options );
-
-    }; */
-    
-    google.setOnLoadCallback( drawRegionsMap2 );
-
-    function drawRegionsMap2()
-    {
-
+   
         // create data table
         var data2 = google.visualization.arrayToDataTable([
 [ 'CountyCode', 'Value', 'Name' ],
@@ -3189,7 +3155,32 @@
 [	'WY-16'	,	0.09	,	'Washakie'	]	,
 [	'WY-17'	,	0.57	,	'Weston'	]	  
 		  ]);
-	    
+		  
+		      // create chart object
+        var chart = new google.visualization.GeoChart(
+            document.getElementById( 'chart_div' )
+        );
+
+        // defines the data for the tooltip
+        var formatter = new google.visualization.PatternFormat('{0}');
+        formatter.format( data, [0,1], 1 );
+        var formatter = new google.visualization.PatternFormat('{2}');
+        formatter.format( data, [0,1,2], 0 );
+
+        // defines the data for the chart values
+        var view = new google.visualization.DataView(data);
+        view.setColumns([0, 1]);
+
+        // set options for this chart
+        var options =
+        {
+            width:          286,
+            region:         'US',
+            resolution:     'provinces',
+            colorAxis: { colors: ['#abdfab', '#006600'] },
+            legend: 'none'
+        };
+ 
 		// set chart source
 		google.visualization.GeoChart.setMapsSource('https://varsha2509.github.io/maps/')
 		
@@ -3218,9 +3209,12 @@
           		  resolution:     'provinces',
           		  colorAxis: { colors: ['#abdfdd', '#001a92'] }
        		 };
+			 
+		 // draw chart
+        chart.draw( view, options );	 
 
         // draw chart
-        chart2.draw( view2, options2 );
+        chart2.draw( view2,options2 );
 		
 		
 			google.visualization.events.addListener(geochart, 'regionClick', function(r) {
