@@ -78,7 +78,7 @@
 
         // create data table
         var data2 = google.visualization.arrayToDataTable([
-            [ 'CountyCode', 'Value', 'Name' ],
+[ 'CountyCode', 'Value', 'Name' ],
 [	'AL-01'	,	0.25	,	'Autauga'	]	,
 [	'AL-02'	,	0.61	,	'Baldwin'	]	,
 [	'AL-03'	,	1.27	,	'Barbour'	]	,
@@ -3210,17 +3210,17 @@
         view2.setColumns([0, 1]);
 
         // set options for this chart
-        var options =
-        {
-            width:          286,
-            region:         'US',
-            resolution:     'provinces',
-            colorAxis: { colors: ['#abdfab', '#006600'] },
-            legend: 'none'
-        };
+        var options2 =
+       		 {
+         		  width:          556,
+				  height: 	    347,	
+          		  region:         'US',
+          		  resolution:     'provinces',
+          		  colorAxis: { colors: ['#abdfdd', '#001a92'] }
+       		 };
 
         // draw chart
-        chart2.draw( view2, options );
+        chart2.draw( view2, options2 );
 
     };
     
@@ -3232,6 +3232,6 @@
 
 
 <div id="chart_div" style="width: 286px; height: 180px;"></div>
- <div id="chart_div2" style="width: 286px; height: 180px;"></div>
+ <div id="chart_div2"></div>
 </body>
 </html>
