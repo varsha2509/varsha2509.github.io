@@ -3221,6 +3221,13 @@
 
         // draw chart
         chart2.draw( view2, options2 );
+		
+		
+			google.visualization.events.addListener(geochart, 'regionClick', function(r) {
+					console.log(r.region);
+					});
+		
+		
 
     };
     
