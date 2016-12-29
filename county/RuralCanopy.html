@@ -5,9 +5,8 @@
 <script type='text/javascript'>
 	// *** setting src="https://www.gstatic.com/charts/loader.js as source doesn't work **** //
 
-    google.load( 'visualization', '1.1',  { 'packages': ['geochart'] } );
+    google.load( 'visualization', '1',  { 'packages': ['geochart'] } );
     google.setOnLoadCallback( drawRegionsMap );
-    google.setOnLoadCallback( drawRegionsMap2 );
 
     function drawRegionsMap()
     {
@@ -3124,50 +3123,7 @@
 [	'WY-16'	,	0.09	,	'Washakie'	]	,
 [	'WY-17'	,	0.57	,	'Weston'	]	  
 		  ]);
-	    
-// set chart source
-	 google.visualization.GeoChart.setMapsSource('https://varsha2509.github.io/maps/')
-	    
-//create chart object
-         var chart	= new google.visualization.GeoChart(
-      		          document.getElementById( 'visualization' )
-        		); 
-	    
-// defines the data for the tooltip
-	var formatter = new google.visualization.PatternFormat('{0}');
-			formatter.format( data, [2,1], 2 );
-//	
-	var formatter = new google.visualization.PatternFormat('{2}');
-			formatter.format( data, [0,1,2], 0 );	    
- // defines the data for the chart values
-	var view = new google.visualization.DataView(data);
-			view.setColumns([0, 1]);
-	    
- // set options for this chart
-        var options =
-       		 {
-         		  width:          556,
-				  height: 	    347,	
-          		  region:         'US',
-          		  resolution:     'provinces',
-          		  colorAxis: { colors: ['#abdfdd', '#001a92'] }
-       		 };
-	    
-// draw chart
-	chart.draw(view, options);
-	    
-	    
-	//google.visualization.events.addListener(geochart, 'regionClick', function(r) {
-	//				console.log(r.region);
-//					});
-	}
-		
 
-
-
-    function drawRegionsMap2()
-    {
-		  
 var data2 = google.visualization.arrayToDataTable([
 ['County', 'Value' 'FIPS'],
 [	'AL-01'	,	2.44	,	'Autauga'	]	,
@@ -6280,45 +6236,8 @@ var data2 = google.visualization.arrayToDataTable([
 [	'WY-16'	,	0.50	,	'Washakie'	]	,
 [	'WY-17'	,	3.12	,	'Weston'	]	
 		]);
-// set chart source
-	 google.visualization.GeoChart.setMapsSource('https://varsha2509.github.io/maps/')
-		 
-	    
-	    
-//create chart object
-         var chart2	= new google.visualization.GeoChart(
-      		          document.getElementById( 'visualization2' )
-        		); 
-	    
-// defines the data for the tooltip
-	var formatter = new google.visualization.PatternFormat('{0}');
-			formatter.format( data2, [2,1], 2 );
-//	
-	var formatter = new google.visualization.PatternFormat('{2}');
-			formatter.format( data2, [0,1,2], 0 );	    
-
- // defines the data for the chart values
-	var view2 = new google.visualization.DataView(data2);
-			view2.setColumns([0, 1]);
-	    
- // set options for this chart
-        var options =
-       		 {
-         		  width:          556,
-				  height: 	    347,	
-          		  region:         'US',
-          		  resolution:     'provinces',
-          		  colorAxis: { colors: ['#abdfdd', '#001a92'] }
-       		 };
-	    
-// draw chart
-	chart2.draw(view2, options);
-//	google.visualization.events.addListener(geochart, 'regionClick', function(r) {
-					//console.log(r.region);
-					//});
-	}	    
-	
-/*var data3 = google.visualization.arrayToDataTable([
+		
+var data3 = google.visualization.arrayToDataTable([
 ['County', 'Value' 'FIPS'],	
 [	'AL-01'	,	0.44	,	'Autauga'	]	,
 [	'AL-02'	,	0.45	,	'Baldwin'	]	,
@@ -12545,82 +12464,132 @@ var data4 = google.visualization.arrayToDataTable([
 [	'WY-16'	,	0.08	,	'Washakie'	]	,
 [	'WY-17'	,	0.16	,	'Weston'	]	
 		
-		]); */
+		]);	
 		
-		
-	
+// set chart source
+	 google.visualization.GeoChart.setMapsSource('https://varsha2509.github.io/maps/')
+		 
+	    
+	    
+//create chart object
+        var chart	= new google.visualization.GeoChart(
+      		          document.getElementById( 'chart_div' )
+        		); 
+		var chart2	= new google.visualization.GeoChart(
+      		          document.getElementById( 'chart_div2' )
+        		); 		
+	    var chart3	= new google.visualization.GeoChart(
+      		          document.getElementById( 'chart_div3' )
+        		);
 
-	
-	
-		//geochart.draw(data, {width: 556, height: 347, region:'US', resolution: 'provinces', displayMode:'regions'});
-			
-	//	var chart2 = new google.visualization.GeoChart(
-	// 		document.getElementById('visualization2')
-	//	);
-		//geochart.draw(data2, {width: 556, height: 347, region:'US', resolution: 'provinces', displayMode:'regions'});
+		var chart4	= new google.visualization.GeoChart(
+      		          document.getElementById( 'chart_div4' )
+        		); 		
+				
+// defines the data for the tooltip
+	var formatter = new google.visualization.PatternFormat('{0}');
+			formatter.format( data, [2,1], 2 );
+//	
+	var formatter = new google.visualization.PatternFormat('{2}');
+			formatter.format( data, [0,1,2], 0 );
 
-/*		var geochart3 = new google.visualization.GeoChart(
-	 		document.getElementById('visualization3'));
-		//geochart.draw(data3, {width: 556, height: 347, region:'US', resolution: 'provinces', displayMode:'regions'});
-		
-		var geochart4 = new google.visualization.GeoChart(
-	 		document.getElementById('visualization4'));
-		//geochart.draw(data4, {width: 556, height: 347, region:'US', resolution: 'provinces', displayMode:'regions'});
-		
-	     */
-	    	
+// Data 2
+	var formatter = new google.visualization.PatternFormat('{0}');
+			formatter.format( data2, [2,1], 2 );
+//	
+	var formatter = new google.visualization.PatternFormat('{2}');
+			formatter.format( data2, [0,1,2], 0 );
 			
-			//		formatter.format( data2, [0,1,2], 0 );
-	   	/*    // defines the data for the tooltip
-				var formatter2 = new google.visualization.PatternFormat('{0}');
-					formatter2.format(data2, [2,1], 2 );
-				var formatter2 = new google.visualization.PatternFormat('{2}');
-					formatter2.format(data2, [0,1,2], 0 ); */
-	 /*   // defines the data for the tooltip
-        	var formatter = new google.visualization.PatternFormat('{0}');
-       			 formatter.format( data3, [0,1], 1 );
-    		 var formatter = new google.visualization.PatternFormat('{2}');
-     			  formatter.format( data3, [0,1,2], 0 );
-	    // defines the data for the tooltip
-			var formatter = new google.visualization.PatternFormat('{0}');
-       			 formatter.format( data4, [0,1], 1 );
-    		 var formatter = new google.visualization.PatternFormat('{2}');
-     			  formatter.format( data4, [0,1,2], 0 );  */
-	    
-	    
-		//	var view2 = new google.visualization.DataView(data2);
-			//	view2.setColumns([0, 1]);
-/*	  	 	var view3 = new google.visualization.DataView(data3);
-       		 view3.setColumns([0, 1]);
-			var view4 = new google.visualization.DataView(data4);
-       		 view4.setColumns([0, 1]); */
-	    
-	   
-	
-	    	 //	chart2.draw(view2, options );
-	    	/*	geochart3.draw(view3, options );
-	    		geochart4.draw(view4, options ); */
+// Data 3
+	var formatter = new google.visualization.PatternFormat('{0}');
+			formatter.format( data3, [2,1], 2 );
+//	
+	var formatter = new google.visualization.PatternFormat('{2}');
+			formatter.format( data3, [0,1,2], 0 );
+// Data 4
+	var formatter = new google.visualization.PatternFormat('{0}');
+			formatter.format( data4, [2,1], 2 );
+//	
+	var formatter = new google.visualization.PatternFormat('{2}');
+			formatter.format( data4, [0,1,2], 0 );			
 
-	    
+ // defines the data for the chart values
+	var view = new google.visualization.DataView(data);
+			view.setColumns([0, 1]);		
+// Data2			
+	var view2 = new google.visualization.DataView(data2);
+			view2.setColumns([0, 1]);		
+// Data3			
+	var view3 = new google.visualization.DataView(data3);
+			view3.setColumns([0, 1]);
+// Data4			
+	var view4 = new google.visualization.DataView(data4);
+			view4.setColumns([0, 1]);			
 			
+ // set options for this chart
+        var options =
+       		 {
+         		  width:          556,
+				  height:   	    347,	
+          		  region:         'US',
+          		  resolution:     'provinces',
+          		  colorAxis: { colors: ['#abdfdd', '#001a92'] }
+       		 };
+		var options2 =
+       		 {
+         		  width:          556,
+				  height:   	    347,	
+          		  region:         'US',
+          		  resolution:     'provinces',
+          		  colorAxis: { colors: ['#abdfdd', '#001a92'] }
+       		 };	 
+		var options3 =
+       		 {
+         		  width:          556,
+				  height:   	    347,	
+          		  region:         'US',
+          		  resolution:     'provinces',
+          		  colorAxis: { colors: ['#abdfdd', '#001a92'] }
+       		 };	 
+	    var options4 =
+       		 {
+         		  width:          556,
+				  height:   	    347,	
+          		  region:         'US',
+          		  resolution:     'provinces',
+          		  colorAxis: { colors: ['#abdfdd', '#001a92'] }
+       		 };
+// draw chart
+	chart.draw(view, options);
+	chart2.draw(view2, options2);
+	chart3.draw(view3, options3);
+	chart4.draw(view4, options4);
+	
+//	google.visualization.events.addListener(geochart, 'regionClick', function(r) {
+					//console.log(r.region);
+					//});
+	}	    
+	
+		
+			  			
   </script>
  </head>
  <body>   
 	  <h3> NO<sub>2</sub> Sequestration by Canopy in rural areas </h3>  
 	 This map represents NO<sub>2</sub> sequestration rate by canopy cover in rural areas in each county in units of g/m<sup>2</sup>. 
-  	<div id="visualization"></div>
+  	<div id="chart_div"></div>
 	 
 	   <h3> PM<sub>10</sub> Sequestration by Canopy in rural areas </h3>  
 	 This map represents PM<sub>10</sub> sequestration rate by canopy cover in rural areas in each county in units of g/m<sup>2</sup>. 
-  	<div id="visualization2"></div>
+  	<div id="chart_div2"></div>
 	 
-	<!--    <h3> SO<sub>2</sub> Sequestration by Canopy in rural areas </h3>  
+	  <h3> SO<sub>2</sub> Sequestration by Canopy in rural areas </h3>  
 	 This map represents SO<sub>2</sub> sequestration rate by canopy cover in rural areas in each county in units of g/m<sup>2</sup>. 
-  	<div id="visualization3"></div>
+  	<div id="chart_div3"></div>
 	 
 	  <h3> PM<sub>25</sub> Sequestration by Canopy in rural areas </h3>  
 	 This map represents PM<sub>25</sub> sequestration rate by canopy cover in rural areas in each county in units of g/m<sup>2</sup>. 
-  	<div id="visualization4"></div> -->
+  	<div id="chart_div4"></div> 
 	
  </body>
 </html>
