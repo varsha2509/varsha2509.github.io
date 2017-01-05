@@ -12,7 +12,7 @@
     {
         // create data table
         var data = google.visualization.arrayToDataTable([
-            [ 'CountyCode', 'County', 'Name' ],
+[ 'CountyCode', 'County', 'Name' ],
 [	'AL-01'	,	0.45	,	'Autauga'	]	,
 [	'AL-02'	,	0.24	,	'Baldwin'	]	,
 [	'AL-03'	,	0.51	,	'Barbour'	]	,
@@ -2805,7 +2805,7 @@
 [	'VA-04'	,	0.59	,	'Amelia'	]	,
 [	'VA-05'	,	0.72	,	'Amherst'	]	,
 [	'VA-06'	,	0.59	,	'Appomattox'	]	,
-[	'VA-07'	,	9999.00	,	'Arlington'	]	,
+[	'VA-07'	,	0	,	'Arlington'	]	,
 [	'VA-08'	,	0.56	,	'Augusta'	]	,
 [	'VA-09'	,	0.85	,	'Bath'	]	,
 [	'VA-0A'	,	0.59	,	'Bedford'	]	,
@@ -2904,15 +2904,15 @@
 [	'VA-67'	,	0.35	,	'Covington'	]	,
 [	'VA-68'	,	0.27	,	'Danville'	]	,
 [	'VA-69'	,	0.08	,	'Emporia'	]	,
-[	'VA-6A'	,	9999.00	,	'Fairfax City'	]	,
-[	'VA-6B'	,	9999.00	,	'Falls Church'	]	,
+[	'VA-6A'	,	0	,	'Fairfax City'	]	,
+[	'VA-6B'	,	0	,	'Falls Church'	]	,
 [	'VA-6C'	,	0.04	,	'Franklin City'	]	,
 [	'VA-6D'	,	0.12	,	'Fredericksburg'	]	,
 [	'VA-6E'	,	0.36	,	'Galax'	]	,
 [	'VA-6F'	,	0.03	,	'Hampton'	]	,
 [	'VA-70'	,	0.06	,	'Harrisonburg'	]	,
 [	'VA-71'	,	0.15	,	'Hopewell'	]	,
-[	'VA-72'	,	9999.00	,	'Lexington'	]	,
+[	'VA-72'	,	0	,	'Lexington'	]	,
 [	'VA-73'	,	0.37	,	'Lynchburg'	]	,
 [	'VA-74'	,	0.06	,	'Manassas'	]	,
 [	'VA-75'	,	0.06	,	'Manassas Park'	]	,
@@ -3122,9 +3122,6 @@
 [	'WY-15'	,	0.08	,	'Uinta'	]	,
 [	'WY-16'	,	0.05	,	'Washakie'	]	,
 [	'WY-17'	,	0.09	,	'Weston'	]	
-
-	
-	
  	]);
 
 	 // set maps source
@@ -3153,7 +3150,7 @@
 	    height: 	    347,	
             region:         'US',
             resolution:     'provinces',
-            colorAxis: { colors: ['#abdfdd', '#001a92'] }
+            colorAxis: { colors: ['#d3ffbe', '#98e600','#70a800','#267300','#001a92'] }
         };
 
         // draw chart
