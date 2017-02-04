@@ -53,6 +53,14 @@
       <option value="Smoked Beer">Smoked Beer</option>
     </select>
 </div><div class="clear"></div><div id="error-message-style-sub-1"></div>
+<script>
+	$("#beerStyle").change ( function () {
+    var targID  = $(this).val ();
+    $("div.style-sub-1").hide ();
+    $('#' + targID).show ();
+} )
+</script>
+
 
 </body>
 	
