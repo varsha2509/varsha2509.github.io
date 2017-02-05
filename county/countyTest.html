@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<style>
-			body{background-color: red;}
+			body{background-color: blue;}
 			h1   {color: DarkGrey;}
 			p    {color: Lavender;}
 		</style>
@@ -14,7 +14,6 @@
     $('#Rank').bind('change', function() {
         var elements = $('div.container').children().hide(); // hide all the elements
         var value = $(this).val();
-
         if (value.length) { // if somethings' selected
             elements.filter('.' + value).show(); // show the ones we want
         }
@@ -26,7 +25,6 @@
     $('#Rural').bind('change', function() {
         var elements = $('div.container').children().hide(); // hide all the elements
         var value = $(this).val();
-
         if (value.length) { // if somethings' selected
             elements.filter('.' + value).show(); // show the ones we want
         }
@@ -65,12 +63,12 @@
 </div>
 
 <div class="container">
-	<div class ="Carbon-Sequestration">
+	<div class ="Canopy-Sequestration">
 		Select Pollutant
 	</div>
 </div>
 <div class="container">
-	<div class = "Carbon-Sequestration">
+	<div class = "Canopy-Sequestration">
 		<select onchange="location =this.value">
 			 <option value = disabled selected value>  </option> 
 			<option value="https://varsha2509.github.io/county/RuralCanopyNO2.html"> NO2 </option>
