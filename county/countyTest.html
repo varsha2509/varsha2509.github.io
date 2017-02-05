@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<style>
-			body{background-color: red;}
+			body{background-color: green;}
 			h1   {color: DarkGrey;}
 			p    {color: Lavender;}
 		</style>
@@ -23,7 +23,7 @@
 		</script>
 <script>
 	    $(document).ready(function() {
-    $('#RuralCanopy').bind('change', function() {
+    $('#Rural').bind('change', function() {
         var elements = $('div.container').children().hide(); // hide all the elements
         var value = $(this).val();
 
@@ -64,13 +64,13 @@
 </div>
 
 <div class="container">
-	<div class ="Canopy-Sequestration">
+	<div class ="RuralCanopy">
 		Select Pollutant
 	</div>
 </div>
 <div class="container">
-	<div class = "Canopy-Sequestration">
-		<select id="RuralCanopy" name="RuralCanopy" size="1" title="">
+	<div class = "RuralCanopy">
+		<select id="Rural" name="Rural" size="1" title="">
 			<option value="NO2"> NO2 </option>
 		</select>
 	</div>
