@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<style>
-			body{background-color: red;}
+			body{background-color: green;}
 			h1   {color: DarkGrey;}
 			p    {color: Lavender;}
 		</style>
@@ -17,6 +17,13 @@
     $('#' + targID).show ();
 } )
   </script>
+ <script>
+   $("#Ale").change ( function () {
+    var targID  = $(this).val ();
+    $("div.style-sub-1").hide ();
+    $('#' + targID).show ();
+} )
+  </script>		
      </head>
 <body> 
 
