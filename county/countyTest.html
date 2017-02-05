@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<style>
-			body{background-color: green;}
+			body{background-color: blue;}
 			h1   {color: DarkGrey;}
 			p    {color: Lavender;}
 		</style>
@@ -57,6 +57,7 @@
 <div class="container">
     <div class="Canopy-Sequestration">	
         <select>
+	    <option value = disabled selected value>  </option> 
             <option value="RuralCanopy">Rural</option>
 	    <option value="UrbanCanopy">Urban</option>
         </select>
@@ -64,14 +65,16 @@
 </div>
 
 <div class="container">
-	<div class ="RuralCanopy">
+	<div class ="Canopy-Sequestration">
 		Select Pollutant
 	</div>
 </div>
 <div class="container">
-	<div class = "RuralCanopy">
-		<select id="Rural" name="Rural" size="1" title="">
-			<option value="NO2"> NO2 </option>
+	<div class = "Canopy-Sequestration">
+		<select onchange="location =this.value">
+			 <option value = disabled selected value>  </option> 
+			<option value="https://varsha2509.github.io/county/RuralCanopyNO2.html"> NO2 </option>
+			<option value="https://varsha2509.github.io/county/RuralCanopySO2.html"> SO2 </option>
 		</select>
 	</div>
 </div>
