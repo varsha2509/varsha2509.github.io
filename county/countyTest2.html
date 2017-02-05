@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<style>
+			body{background-color: red;}
+			h1   {color: DarkGrey;}
+			p    {color: Lavender;}
+		</style>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+   <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+   <script type="text/javascript" src="test.js"></script>
+   
+   
+   <script>
+   $("#beerStyle").change ( function () {
+    var targID  = $(this).val ();
+    $("div.style-sub-1").hide ();
+    $('#' + targID).show ();
+} )
+  </script>
+     </head>
+<body> 
+
+<div class="ccms_form_element cfdiv_custom" id="style_container_div">
+<label>Beer Style:</label><select size="1" id="beerStyle" class=" validate['required']" title="" type="select" name="style">
+<option value="">-Choose A Style-</option>
+<option value="Ale">Ale</option>
+<option value="Lager">Lager</option>
+<option value="Hybrid">Hybrid</option>
+</select><div class="clear"></div><div id="error-message-style"></div></div>
+<div id="Ale"  class="style-sub-1"  style="display: none;" name="stylesub1" onchange="ChangeDropdowns(this.value)">
+  <label>Which Kind of Ale?</label>
+    <select>
+      <option value="">-Choose An Ale-</option> 
+      <option value="American Ale">American Ale</option>
+      <option value="Belgian / French Ale">Belgian / French Ale</option>
+      <option value="English Ale">English Ale</option>
+      <option value="Finnish Ale">Finnish Ale</option>
+      <option value="German Ale">German Ale</option>
+      <option value="Irish Ale">Irish Ale</option>
+      <option value="Russian Ale">Russian Ale</option>
+      <option value="Scottish Ale">Scottish Ale</option>
+    </select>
+</div>
+<div id="Lager"  class="style-sub-1"  style="display: none;" name="stylesub1" onchange="ChangeDropdowns(this.value)">
+  <label>Which Kind of Lager?</label>
+    <select>
+    <option value="">-Choose A Lager-</option>
+      <option value="American Lager">American Lager</option>
+      <option value="Czech Lager">Czech Lager</option>
+      <option value="European Lager">European Lager</option>
+      <option value="German Lager">German Lager</option>
+      <option value="Japanese Lager">Japanese Lager</option>
+    </select>
+</div>
+<div id="Hybrid"  class="style-sub-1"  style="display: none;" name="stylesub1" onchange="ChangeDropdowns(this.value)">
+  <label>Which Kind of Hybrid?</label> 
+    <select>
+    <option value="">-Choose A Hybrid-</option>
+      <option value="Fruit / Vegetable Beer">Fruit / Vegetable Beer</option>
+      <option value="Herbed / Spiced Beer">Herbed / Spiced Beer</option>
+      <option value="Smoked Beer">Smoked Beer</option>
+    </select>
+</div><div class="clear"></div><div id="error-message-style-sub-1"></div></div>
+</body>
+	
+	
+	
+</html>
