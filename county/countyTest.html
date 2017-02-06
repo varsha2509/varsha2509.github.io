@@ -19,17 +19,6 @@
         }
     }).trigger('change');
 });
-		</script>
-<script>
-	    $(document).ready(function() {
-    $('#Rural').bind('change', function() {
-        var elements = $('div.container').children().hide(); // hide all the elements
-        var value = $(this).val();
-        if (value.length) { // if somethings' selected
-            elements.filter('.' + value).show(); // show the ones we want
-        }
-    }).trigger('change');
-});
 		</script>		
 		
     </head>
@@ -57,19 +46,13 @@
     </div>
 </div>
 
-<div class="container">
-	<div id ="RuralCanopy">
-		Select Pollutant
-	</div>
-</div>
-<div class="container">
-	<div id = "RuralCanopy">
+<div class="container" id="RuralCanopy" style="display: none;"  onchange="ChangeDropdowns(this.value)">
+		<label> Select Pollutant </label>
 		<select onchange="location =this.value">
 			 <option value = disabled selected value>  </option> 
 			<option value="https://varsha2509.github.io/county/RuralCanopyNO2.html"> NO2 </option>
 			<option value="https://varsha2509.github.io/county/RuralCanopySO2.html"> SO2 </option>
 		</select>
-	</div>
 </div>
 	
 	
