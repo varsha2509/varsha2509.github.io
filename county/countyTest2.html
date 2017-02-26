@@ -86,40 +86,35 @@
 }
 
 
-//Function for demand density
-	window2.onload = function() {
+
+	
+	window.onload = function () {
 	//Get html elements
 	var densitySelection = document.getElementById("densitySelection");
 	var densityemissionsSelection = document.getElementById("densityemissionsSelection");
+	var sequestrationSelection = document.getElementById("sequestrationSelection");
+	var ruralurbanSelection = document.getElementById("ruralurbanSelection");	
+	var emissionSelection = document.getElementById("emissionSelection");
+	
 	
 	//Load Densities
 	for (var density in DensityInfo) {
 		densitySelection.options[densitySelection.options.length] = new Option(density,density);
 		}
+		
 	// density Changed
-	densitySelection.onchange = function(){
-	densityemissionsSelection.length = 1; // remove all options bar first
+	densitySelection.onchange = function() {
+		densityemissionsSelection.length = 1; // remove all options bar first
 	
-	if (this.selectedIndex < 1)
+		if (this.selectedIndex < 1)
 			 return; // done
 
-	for (var emission in DensityInfo[densitySelection.value][this.value]) {
+		for (var emission in DensityInfo[this.value]) {
 			 densityemissionsSelection.options[densityemissionsSelection.options.length] = new Option(emission, emission);
 	
 			}
-		}
-	}
-
-
-	
-	window.onload = function () {
-	//Get html elements
-	var sequestrationSelection = document.getElementById("sequestrationSelection");
-	var ruralurbanSelection = document.getElementById("ruralurbanSelection");	
-	var emissionSelection = document.getElementById("emissionSelection");
-	//var zipSel = document.getElementById("zipSel");
-	
-	
+		}	
+		
 	
 	//Load Vegetations
 	for (var vegetation in vegetationLandEmissionInfo) {
@@ -155,6 +150,10 @@
 		 }
 	}
 	
+	
+	
+	
+	
 /*	//City Changed
 	emissionSelection.onchange = function () {
 		zipSel.length = 1; // remove all options bar first
@@ -182,7 +181,7 @@ function redirectToDensity() {
 	alert ("Redirecting to" + density_first_word + density_second_word + densityemissionsSelection);
 	
 	var redirect_page_string = density_first_word + density_second_word + densityemissionsSelection;
-	window2.location = './'+redirect_page_string + '.html'
+	window.location = './'+redirect_page_string + '.html'
 }
 
 function redirectToSpecificPage() {
