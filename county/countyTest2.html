@@ -21,19 +21,19 @@
 		"Demand Density": {
 			"SO2": [],
 			"PM10" : [],
-			"PM2.5": [],
+			"PM25": [],
 			"NO2": []
 			},
 		"CurrentSupply Density":{
 			"SO2": [],
 			"PM10" : [],
-			"PM2.5": [],
+			"PM25": [],
 			"NO2": []
 			},
 		"PotentialSupply Density":{
 			"SO2": [],
 			"PM10" : [],
-			"PM2.5": [],
+			"PM25": [],
 			"NO2": []
 			},
 		}	
@@ -45,13 +45,13 @@
 			"Rural": {
 			"SO2": [],
 			"PM10": [],
-			"PM2.5": [],
+			"PM25": [],
 			"NO2": []
 		},
 		"Urban": {
 			"SO2": [],
 			"PM10": [],
-			"PM2.5": [],
+			"PM25": [],
 			"NO2": []
 		}
 	},
@@ -59,7 +59,7 @@
 		"Rural": {
 			"SO2": [],
 			"PM10": [],
-			"PM2.5": [],
+			"PM25": [],
 			"NO2": []
 		},
 		"Urban": {
@@ -73,13 +73,13 @@
 		"Rural": {
 			"SO2": [],
 			"PM10": [],
-			"PM2.5": [],
+			"PM25": [],
 			"NO2": []
 		},
 		"Urban": {
 			"SO2": [],
 			"PM10": [],
-			"PM2.5": [],
+			"PM25": [],
 			"NO2": []
 		}
 	}
@@ -180,7 +180,7 @@ function redirectToDensity() {
 	
 	alert ("Redirecting to" + density_first_word + density_second_word + densityemissionsSelection);
 	
-	var redirect_page_string = density_first_word + density_second_word + densityemissionsSelection;
+	var redirect_page_string = density_first_word + density_second_word + densityemissionsSelection
 	window.location = './'+redirect_page_string + '.html'
 }
 
