@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<style>
-			body{background-color: White;}
+			body{background-color: green;}
 			h1   {color: DarkGrey;}
 			p    {color: Black;}
 			button{
@@ -178,7 +178,7 @@ function redirectToDensity() {
 	
 	var densityemissionsSelection = document.getElementById("densityemissionsSelection").value;
 	
-	alert ("Redirecting to" + density_first_word + density_second_word + densityemissionsSelection);
+	alert ("Redirecting to" + density_first_word + density_second_word.trim() + densityemissionsSelection);
 	
 	var redirect_page_string = density_first_word + density_second_word.trim() + densityemissionsSelection
 	window.location = './'+redirect_page_string + '.html'
