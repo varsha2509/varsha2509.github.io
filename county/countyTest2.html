@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<style>
-			body{background-color: White;}
+			body{background-color: Green;}
 			h1   {color: DarkGrey;}
 			p    {color: Black;}
 			button{
@@ -173,8 +173,8 @@
 function redirectToDensity() {
 // Demand density
 	var density = document.getElementById("densitySelection").value;
-	var density_first_word = density.substr(0,density.indexOf(' '));
-	var density_second_word = density.substr(1,density.indexOf(' '));
+	var density_first_word = density.substr(0,density.indexOf(' Density'));
+	var density_second_word = density.substr(density.indexOf(' '));
 	
 	var densityemissionsSelection = document.getElementById("densityemissionsSelection").value;
 	
