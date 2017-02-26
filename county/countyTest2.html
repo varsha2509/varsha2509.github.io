@@ -180,7 +180,7 @@ function redirectToDensity() {
 	
 	alert ("Redirecting to" + density_first_word + density_second_word + densityemissionsSelection);
 	
-	var redirect_page_string = density_first_word + density_second_word + densityemissionsSelection
+	var redirect_page_string = density_first_word + density_second_word.trim() + densityemissionsSelection
 	window.location = './'+redirect_page_string + '.html'
 }
 
@@ -225,7 +225,7 @@ function redirectToFips() {
 		 <br>
 		<br>
 		<select id="densityemissionsSelection" size = "1">
-			<option value="" selected="selected"> --Select Emission--</option>
+			<option value="" selected="selected"> --Select Pollutant--</option>
 		</select>
 			<br>
 		<br>	
@@ -248,7 +248,7 @@ function redirectToFips() {
 	    <br>
 	    <br>    
 	    <select id="emissionSelection" size="1">
-	        <option value="" selected="selected">-- Select Emission--</option>
+	        <option value="" selected="selected">-- Select Pollutant--</option>
 	    </select>
 	    <br>
 	    <br>
