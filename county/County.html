@@ -224,7 +224,7 @@ function redirectToDensity() {
 	
 	var densityemissionsSelection = document.getElementById("densityemissionsSelection").value;
 	
-	alert ("Redirecting to " + density_first_word + density_second_word + densityemissionsSelection);
+	//alert ("Redirecting to " + density_first_word + density_second_word + densityemissionsSelection);
 	
 	var redirect_page_string = density_first_word + density_second_word + densityemissionsSelection
 	window.location = './'+redirect_page_string + '.html'
@@ -238,7 +238,7 @@ function redirectToSpecificPage() {
 	var urbanrural = document.getElementById("ruralurbanSelection").value;
 	var emission = document.getElementById("emissionSelection").value;
 
-	alert("Redirecting to " + urbanrural + vegetation_first_word + emission);
+	//alert("Redirecting to " + urbanrural + vegetation_first_word + emission);
 
 	var redirect_page_string = urbanrural + vegetation_first_word + emission
     window.location = './'+redirect_page_string + '.html'
@@ -255,7 +255,7 @@ function redirectToVkPage() {
 	
 	var Vkemissions = document.getElementById("sustainabilityindexemissionsSelection").value;
 	
-	alert ("Redirecting to" + Vk_first_word + Vk_second_word + Vkemissions);
+	//alert ("Redirecting to" + Vk_first_word + Vk_second_word + Vkemissions);
 	
 	var redirect_page_string = Vk_first_word + Vk_second_word + Vkemissions
 	window.location = './'+redirect_page_string + '.html'
@@ -268,7 +268,7 @@ function redirectToLand() {
 	var landcov_first_word = landcov.substr(0, landcov.indexOf(' '));
 	var landcov_second_word = 'Cover';
 	
-	alert ("Redirecting to" + landcov_first_word + landcov_second_word);
+	//alert ("Redirecting to" + landcov_first_word + landcov_second_word);
 	
 	var redirect_page_string = landcov_first_word + landcov_second_word
 	window.location = './'+redirect_page_string + '.html'
