@@ -7,11 +7,12 @@
 <script type='text/javascript'>
 	// *** setting src="https://www.gstatic.com/charts/loader.js as source doesn't work **** //
 	
+google.charts.load('current', {'packages':['geochart']});
+google.charts.setOnLoadCallback(drawRegionsMap);	
 	
 	
-	
-google.load( 'visualization', '1', { 'packages': ['geochart'] } );
-    google.setOnLoadCallback( drawRegionsMap );
+//google.load( 'visualization', '1', { 'packages': ['geochart'] } );
+//google.setOnLoadCallback( drawRegionsMap );
 
     
 
