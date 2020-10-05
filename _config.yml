@@ -80,12 +80,12 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Sidebar Name"
-  avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
-  location         : "Location"
+  name             : "Varsha Gopalakrishnan"
+  avatar           : "https://media-exp1.licdn.com/dms/image/C4D03AQFfR-O82ooI-g/profile-displayphoto-shrink_200_200/0?e=1606348800&v=beta&t=tXyqPjS-6NgON1tAb2fx5nvbEEhx4xOESjFfw-koVDU"
+  bio              : "Environmental Researcher and Data Scientist"
+  location         : "Mountain View, CA"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=R1JJN00AAAAJ&hl=en&oi=ao"
   email            : "varsha.gopalakrishnan@gmail.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
