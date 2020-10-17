@@ -1,7 +1,7 @@
 ---
 title: "Assessing the capacity of local ecosystems to meet industrial demand for ecosystem services"
 collection: publications
-permalink: /publication/2009-10-01-paper-title-number-1
+permalink: /AIChE Journal/2016-05-27-paper-title-number-1
 excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2016-05-27
 venue: 'AIChE Journal'
