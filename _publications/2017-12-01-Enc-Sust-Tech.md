@@ -12,4 +12,4 @@ citation: 'Gopalakrishnan, Varsha, and Bhavik R. Bakshi. "Including Nature in En
 
 [Download paper here](https://www.sciencedirect.com/science/article/pii/B9780124095489100399)
 
-Recommended citation: Gopalakrishnan, Varsha, and Bhavik R. Bakshi. "Including Nature in Engineering Decisions for Sustainability." (2017): 107-116.
+<!--Recommended citation: Gopalakrishnan, Varsha, and Bhavik R. Bakshi. "Including Nature in Engineering Decisions for Sustainability." (2017): 107-116.-->
