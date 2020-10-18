@@ -6,7 +6,7 @@ excerpt:
 date: 2016-05-27
 venue: 'AIChE Journal'
 paperurl:
-citation: "<div class='altmetric-embed' data-badge-type='donut' data-doi="10.1002/aic.15340"></div>"
+citation: "10.1002/aic.15340"
 ---
 
 
