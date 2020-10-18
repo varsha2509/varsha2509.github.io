@@ -1,6 +1,6 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "Hyperlocal Air Quality Prediction using Machine Learning in East Bay Area, CA"
+excerpt: "The goal of this project is to build machine learning models to predict air quality per city-block in the City of Oakland and San Leandro based on previously measured pollutant concentrations, local meteorological and, conditions local sources of emissions such as industries, traffic intersection data, and automobile traffic on highways without having to rely on complex physical modeling<br/><img src='Image1.png'>"
 collection: portfolio
 ---
 
