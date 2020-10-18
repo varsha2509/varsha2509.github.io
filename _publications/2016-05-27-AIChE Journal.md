@@ -6,7 +6,7 @@ excerpt:
 date: 2016-05-27
 venue: 'AIChE Journal'
 paperurl:
-citation: "10.1002/aic.15340"
+citation:
 ---
 
 
