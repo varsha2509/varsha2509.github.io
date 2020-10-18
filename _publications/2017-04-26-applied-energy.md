@@ -12,5 +12,6 @@ citation: 'Hanes, Rebecca J., Varsha Gopalakrishnan, and Bhavik R. Bakshi. "Syne
 [Download paper here](http://academicpages.github.io/files/paper2.pdf)
 
 Recommended citation: Hanes, Rebecca J., Varsha Gopalakrishnan, and Bhavik R. Bakshi. "Synergies and trade-offs in renewable energy landscapes: Balancing energy production with economics and ecosystem services." Applied Energy 199 (2017): 25-44.
+
 <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1016/j.apenergy.2017.04.081"></div>
 <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
