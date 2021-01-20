@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Varsha Gopalakrishnan"
-  avatar           : "https://media-exp1.licdn.com/dms/image/C4D03AQFfR-O82ooI-g/profile-displayphoto-shrink_200_200/0?e=1606348800&v=beta&t=tXyqPjS-6NgON1tAb2fx5nvbEEhx4xOESjFfw-koVDU"
+  avatar           : "https://i.imgur.com/xHVcnuf.jpg"
   bio              : "Environmental Researcher and Data Scientist"
   location         : "Mountain View, CA"
   employer         :
@@ -102,7 +102,11 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
+<<<<<<< HEAD
   linkedin         : "https://www.linkedin.com/in/varshagopalakrishnan/"
+=======
+  linkedin         : "https://www.linkedin.com/in/varshagopalakrishnan"
+>>>>>>> 7d9c90c01efcc7b6f0e79416984054790910c97f
   orcid            : # "http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
