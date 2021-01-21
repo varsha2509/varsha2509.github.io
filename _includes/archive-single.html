@@ -32,6 +32,8 @@
       </h2>
     {% elsif post.collection == 'publications' %}
       <h2 class="page__title" itemprop="headline">{{ title }}</h2>
+    {% elsif post.collection == 'talks' %}
+      <h2 class="page__title" itemprop="headline">{{ title }}</h2>
     {% else %}
       <h2 class="archive__item-title" itemprop="headline">
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
