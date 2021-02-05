@@ -6,6 +6,8 @@ excerpt: "I developed a county-level spatial inventory of air pollutant sequestr
 
 2. U.S. Department of Forest Service in the [i-Tree Eco tool](https://www.itreetools.org/support/resources-overview/i-tree-methods-and-files/i-tree-eco-resources)"
 collection: portfolio
+
+3. [Bay Area GreenPrint Tool](https://www.bayareagreenprint.org/glossary/)
 ---
 
 
