@@ -8,8 +8,10 @@ redirect_from:
   - /about.html
 ---
 
-Hi! 👋
+Hey there, welcome to my website! 👋
 
-I am an environmental researcher and data scientist specializing in air quality, climate change modeling, and sustainability science. I am passionate about using innovation and technology to tackle issues related to climate change and food security. I have strong expertise in machine learning, geographic information systems and geospatial data, and thrive working in collaborative, cross-functional environments.
+My name is Varsha and I'm currenly a senior data scientist at [The EVERY Company*](https://theeverycompany.com/). I have a background in environmental science and chemical engineering, and I love working on data +  air quality/climate change/sustainability science. Before EVERY, I was working as a senior consultant at Ramboll, working on air quality modeling and emissions estimation.
 
-I am currently a Senior Air Quality Scientist at Ramboll, San Francisco, CA. I hold a Ph.D. in Chemical Engineering from The Ohio State University, a B.Tech in Chemical Engineering from Anna University, India, and have completed a Data Science Bootcamp program with Springboard. I am originally from Chennai, India.
+I am passionate about using innovation and technology to tackle issues related to climate change and food security. I am a map geek, and you can find me scrolling through random digital maps, or building my own (yes, I love working with spatial data).
+
+*Contributed to building the website!
