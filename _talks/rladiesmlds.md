@@ -1,10 +1,10 @@
 ---
 title: "Using Machine Learning and Dispersion Modeling to Estimate Emissions"
 collection: talks
-permalink:
+permalink: "https://www.meetup.com/rladies-irvine/events/275473956/"
 venue: "R-Ladies Irvine and Women in Machine Learning and Data Science - Seattle"
-date: 2020-01-19
-location: " "
+date: 2021-01-19
+location: "Virtual"
 ---
 
 [More information here](https://www.meetup.com/rladies-irvine/events/275473956/)

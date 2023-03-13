@@ -1,7 +1,7 @@
 ---
 title: "Environmental Intelligence: How AI can be a game changer for our environment and health"
 collection: talks
-permalink:
+permalink: "https://www.gotostage.com/channel/e073382db6e246fb90ef409fcaaedc8f/recording/8e258d5db4b048448c80ea21111613be/watch"
 venue: "Ramboll Webinars"
 date: 2020-11-11
 location: "Virtual"
