@@ -3,11 +3,11 @@ title: "[Hyperlocal Air Quality Prediction using Machine Learning in East Bay Ar
 excerpt: "Open source web-application to predict air quality on a city-block basis in Oakland and San Leandro, CA using machine learning models, trained on publicly available datasets on local pollutant concentrations, local meteorological data, emissions from local industrial sources, and traffic emissions.
  <br/>
  <br/>
- * [Web-application](https://aq-webapp-heroku-22.herokuapp.com/) </a>
+ * [Web-application](https://aq-webapp-heroku-22.herokuapp.com/)
  <br/>
- * [Source code](https://github.com/varsha2509/hyperlocal-aq-prediction)</a>
+ * [Source code](https://github.com/varsha2509/hyperlocal-aq-prediction)
  <br/> 
- * [Blog post](https://varsha-gopalakrishnan.medium.com/hyperlocal-air-quality-prediction-using-machine-learning-ed3a661b9a71) </a> 
+ * [Blog post](https://varsha-gopalakrishnan.medium.com/hyperlocal-air-quality-prediction-using-machine-learning-ed3a661b9a71)
  <br/>
  <br/>
  <img src='/images/Image.png'>"
