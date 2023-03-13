@@ -1,12 +1,6 @@
 ---
-title: "[US County-Level Air Pollution Sequestration Dataset](http://varshg.com/county/County.html)"
-excerpt: "Open source spatial inventory of air pollutant sequestration by grassland and shrubland vegetation in the US. The dataset was developed using the [daily leaf area index of vegetation classes](https://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=1210), the National Land Cover dataset and the [i-Tree Eco model](http://www.itreetools.org/). This open-source data is currently used by 
-
-* California Department of Conservation and The Nature Conservancy in the [TerraCount tool](https://maps.conservation.ca.gov/terracount/) for land use planning. 
-
-* U.S. Department of Forest Service in the [i-Tree Eco tool](https://www.itreetools.org/support/resources-overview/i-tree-methods-and-files/i-tree-eco-resources)
-
-* [Bay Area GreenPrint Tool](https://www.bayareagreenprint.org/glossary/)"
+title: "[Clean Air as a City Service](https://www.microsoft.com/en-us/research/group/urban-innovation/articles/why-all-cities-should-have-clean-air-as-a-city-service/)"
+excerpt: "Contributed to a white paper titled [Why all cities should have 'Clean Air as a City Service'](https://www.microsoft.com/en-us/research/uploads/prod/2020/09/Science-of-Air-Quality_Final.pdf) that makes the case for cities to make air quality data readily available and to provide clean air as a service. The paper was written as a part of the [Urban Futures Workshop 2020](https://www.microsoft.com/en-us/research/uploads/prod/2020/09/Science-of-Air-Quality_Final.pdf) hosted by Microsoft."
 collection: portfolio
 ---
 
