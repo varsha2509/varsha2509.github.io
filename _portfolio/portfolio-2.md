@@ -1,6 +1,12 @@
 ---
 title: "[Satellite Image Classification using Deep Learning](https://github.com/varsha2509/image-classification-cnn)"
-excerpt: "In this project, I used the DeepSat-6 satellite image dataset to build a multi-class classification algorithm using convolution neural networks to classify images based on the land use type. <br/> <br/> Check out my <a href='https://github.com/varsha2509/image-classification-cnn' target='_blank'>github repo</a> for more details!<br/><br/><img src='/images/Image2.png'>"
+excerpt: "Image classification of land use types using the DeepSat-6 satellite image dataset <a href='https://www.kaggle.com/datasets/crawford/deepsat-sat6' target='_blank'> and convolution neural networks.
+<br/>
+<br/>
+* [Source code](https://github.com/varsha2509/image-classification-cnn) 
+<br/>
+<br/>
+<img src='/images/Image2.png'>"
 collection: portfolio
 ---
 
