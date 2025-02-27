@@ -1,0 +1,410 @@
+
+<html>
+	<head>
+		<style>
+			body{background-color: Black;}
+			h1   {color: DarkGrey;}
+			h2   {color: Grey;}
+			p    {color: White;}
+			button{
+  			margin:auto;
+  			display:block;
+		}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+		<script type="text/javascript" src="test.js"></script>
+
+		<script>
+		
+			var DensityInfo = {
+		"Demand Density": {
+			"SO2": [],
+			"PM10" : [],
+			"PM2.5": [],
+			"NO2": []
+			},
+		"CurrentSupply Density":{
+			"SO2": [],
+			"PM10" : [],
+			"PM2.5": [],
+			"NO2": []
+			},
+		"PotentialSupply Density":{
+			"SO2": [],
+			"PM10" : [],
+			"PM2.5": [],
+			"NO2": []
+			},
+		}	
+		
+		
+
+			var vegetationLandEmissionInfo = {
+		"Canopy Sequestration": {
+			"Rural": {
+			"SO2": [],
+			"PM10": [],
+			"PM2.5": [],
+			"NO2": []
+		},
+		"Urban": {
+			"SO2": [],
+			"PM10": [],
+			"PM2.5": [],
+			"NO2": []
+		}
+	},
+	"Grassland Sequestration": {
+		"Rural": {
+			"SO2": [],
+			"PM10": [],
+			"PM2.5": [],
+			"NO2": []
+		},
+		"Urban": {
+			"SO2": [],
+			"PM10": [],
+			"PM2.5": [],
+			"NO2": []
+		}
+	},
+	"Shrubland Sequestration": {
+		"Rural": {
+			"SO2": [],
+			"PM10": [],
+			"PM2.5": [],
+			"NO2": []
+		},
+		"Urban": {
+			"SO2": [],
+			"PM10": [],
+			"PM2.5": [],
+			"NO2": []
+		}
+	}
+}
+			var SustainabilityIndexInfo = {
+		"Current Vi": {
+			"SO2": [],
+			"PM10" : [],
+			"PM2.5": [],
+			"NO2": []
+			},
+		"Potential Vi": {
+			"SO2": [],
+			"PM10" : [],
+			"PM2.5": [],
+			"NO2": []
+			},
+		}
+		
+		var LandCoverInfo = {
+			"Canopy Cover": [],
+			"Grassland Cover": [],
+			"Shrubland Cover": [],
+			"Restorable Area": []
+			}
+
+		var CostInfo = {
+			"Cost Effectiveness": [],
+			}
+
+
+
+
+	
+	window.onload = function () {
+	//Get html elements
+	var densitySelection = document.getElementById("densitySelection");
+	var densityemissionsSelection = document.getElementById("densityemissionsSelection");
+	var sequestrationSelection = document.getElementById("sequestrationSelection");
+	var ruralurbanSelection = document.getElementById("ruralurbanSelection");	
+	var emissionSelection = document.getElementById("emissionSelection");
+	var sustainabilityindexSelection = document.getElementById("sustainabilityindexSelection");
+	var sustainabilityindexemissionsSelection = document.getElementById("sustainabilityindexemissionsSelection");	
+	var landcoverSelection = document.getElementById("landcoverSelection");
+	var costeffSelection = document.getElementById("costeffSelection");
+	
+	//Load Densities
+	for (var density in DensityInfo) {
+		densitySelection.options[densitySelection.options.length] = new Option(density,density);
+		}
+		
+	// density Changed
+	densitySelection.onchange = function() {
+		densityemissionsSelection.length = 1; // remove all options bar first
+	
+		if (this.selectedIndex < 1)
+			 return; // done
+
+		for (var emission in DensityInfo[this.value]) {
+			 densityemissionsSelection.options[densityemissionsSelection.options.length] = new Option(emission, emission);
+	
+			}
+		}	
+		
+	
+	//Load Vegetations
+	for (var vegetation in vegetationLandEmissionInfo) {
+		sequestrationSelection.options[sequestrationSelection.options.length] = new Option(vegetation, vegetation);
+	}
+	
+	//vegetation Changed
+	sequestrationSelection.onchange = function () {
+		 
+		 ruralurbanSelection.length = 1; // remove all options bar first
+		 emissionSelection.length = 1; // remove all options bar first
+		 //zipSel.length = 1; // remove all options bar first
+		 
+		 if (this.selectedIndex < 1)
+			 return; // done
+		 
+		 for (var ruralurban in vegetationLandEmissionInfo[this.value]) {
+			 ruralurbanSelection.options[ruralurbanSelection.options.length] = new Option(ruralurban, ruralurban);
+		 }
+	}
+	
+	//ruralurban Changed
+	ruralurbanSelection.onchange = function () {		 
+		 
+		 emissionSelection.length = 1; // remove all options bar first
+		 //zipSel.length = 1; // remove all options bar first
+		 
+		 if (this.selectedIndex < 1)
+			 return; // done
+		 
+		 for (var emission in vegetationLandEmissionInfo[sequestrationSelection.value][this.value]) {
+			 emissionSelection.options[emissionSelection.options.length] = new Option(emission, emission);
+		 }
+	}
+	
+	
+	//Load Sustainability Index
+	for (var Vk in SustainabilityIndexInfo) {
+		sustainabilityindexSelection.options[sustainabilityindexSelection.options.length] = new Option(Vk, Vk);
+	}
+	
+	//Sustainability Index changed
+	sustainabilityindexSelection.onchange = function() {
+			sustainabilityindexemissionsSelection.length = 1; // remove all options bar first
+			
+		if (this.selectedIndex < 1)
+			return;	//done
+			
+		for (var Vkemissions in SustainabilityIndexInfo[this.value]) {
+			sustainabilityindexemissionsSelection.options[sustainabilityindexemissionsSelection.options.length] = new Option(Vkemissions, Vkemissions);
+	}
+}	
+
+
+
+		// Load Landcover categories
+		for (var landcov in LandCoverInfo) {
+			landcoverSelection.options[landcoverSelection.options.length] = new Option (landcov,landcov)
+			}
+		
+		
+		// Load Cost effecitiveness caterogies
+		for (var costeff in CostInfo) {
+			costeffSelection.options[costeffSelection.options.length] = new Option (costeff,costeff)
+			}
+/*	//City Changed
+	emissionSelection.onchange = function () {
+		zipSel.length = 1; // remove all options bar first
+		
+		if (this.selectedIndex < 1)
+			return; // done
+		
+		var zips = countryStateInfo[sequestrationSelection.value][ruralurbanSelection.value][this.value];
+		for (var i = 0; i < zips.length; i++) {
+			zipSel.options[zipSel.options.length] = new Option(zips[i], zips[i]);
+		}
+	}
+	*/	
+}
+
+
+function redirectToDensity() {
+// Demand density
+	var density = document.getElementById("densitySelection").value;
+	var density_first_word = density.substr(0,density.indexOf(' '));
+	var density_second_word ='Density';
+	
+	var densityemissionsSelection = document.getElementById("densityemissionsSelection").value;
+	
+	//alert ("Redirecting to " + density_first_word + density_second_word + densityemissionsSelection);
+	
+	var redirect_page_string = density_first_word + density_second_word + densityemissionsSelection
+	window.location = './'+redirect_page_string + '.html'
+}
+
+function redirectToSpecificPage() {
+	// Sequestration information
+	var vegetation = document.getElementById("sequestrationSelection").value;
+	var vegetation_first_word = vegetation.substr(0, vegetation.indexOf(' '));
+
+	var urbanrural = document.getElementById("ruralurbanSelection").value;
+	var emission = document.getElementById("emissionSelection").value;
+
+	//alert("Redirecting to " + urbanrural + vegetation_first_word + emission);
+
+	var redirect_page_string = urbanrural + vegetation_first_word + emission
+    window.location = './'+redirect_page_string + '.html'
+
+	
+}
+
+
+function redirectToVkPage() {
+	//Sustainability index information
+	var Vk = document.getElementById("sustainabilityindexSelection").value;
+	var Vk_first_word =Vk.substr(-2);
+	var Vk_second_word = Vk.substr(0, Vk.indexOf(' '));
+	
+	var Vkemissions = document.getElementById("sustainabilityindexemissionsSelection").value;
+	
+	//alert ("Redirecting to" + Vk_first_word + Vk_second_word + Vkemissions);
+	
+	var redirect_page_string = Vk_first_word + Vk_second_word + Vkemissions
+	window.location = './'+redirect_page_string + '.html'
+}	
+
+
+function redirectToLand() {
+	// Land cover information
+	var landcov = document.getElementById("landcoverSelection").value;
+	var landcov_first_word = landcov.substr(0, landcov.indexOf(' '));
+	var landcov_second_word = 'Cover';
+	
+	//alert ("Redirecting to" + landcov_first_word + landcov_second_word);
+	
+	var redirect_page_string = landcov_first_word + landcov_second_word
+	window.location = './'+redirect_page_string + '.html'
+	
+}	
+			
+function redirectToCost(){
+	window.location = './CostEff.html'
+}
+
+function redirectToFips() {
+
+	window.location = './FIPS2.html'
+
+}
+		</script>		
+		
+   </head>
+<body>
+ 
+  <h1>Interactive Maps of Air Quality Regulation Ecosystem Service Across U.S.</h1>
+
+	<p> This website contains county-level information on air quality regulation ecosystem service demand generated by emissions of criteria air pollutants from various sources and air quality regulation ecosystem service supply provided by vegetation (canopy, grasslands and shrublands). 
+		Demand for ecosystem service is calculated from the total emissions from point and non-point sources across all counties. The capacity of ecosystem service is based on the potential of vegetation (canopy, grasslands and shrublands) to sequester pollutants. Supply for both current vegetation cover and potential vegetation cover, based on the conversion of grasslands and shrublands to county-average canopy cover is shown in the maps. </p> 
+
+	<h2> <b>County-level Density Maps </b> </h2>
+	<p> County-level demand density is calculated as the total county-level emissions of a pollutant divided by the land area of each county. Supply density maps is calculated by the total supply of ecosystem service divided by land area of each county. </p>
+	<form name = "density" id="density">
+		<select id="densitySelection" size="1">
+			<option value = "" selected = "selected"> --Select Density Type --</option>
+		</select>
+		 <br>
+		<br>
+		<select id="densityemissionsSelection" size = "1">
+			<option value="" selected="selected"> --Select Pollutant--</option>
+		</select>
+			<br>
+		<br>	
+	
+	</form>
+	
+	<input type="button" onclick="redirectToDensity()" value="Get Map"></input>
+	
+	<h2> <b> County-level Sequestration Maps </b> </h2>
+	<p> Sequestration of pollutants in each county is calculated as the product of pollutant flux per unit vegetation cover and the area of vegetation cover in each county. </p>
+	<form name="myform" id="myForm">
+	  	<select id="sequestrationSelection" size="1">
+	        <option value="" selected="selected">-- Select Vegetation Type --</option>
+	    </select>
+	     <br>
+	    <br>
+	  
+	    <select id="ruralurbanSelection" size="1">
+	        <option value="" selected="selected">-- Select Urban/Rural--</option>
+	    </select>
+	    <br>
+	    <br>    
+	    <select id="emissionSelection" size="1">
+	        <option value="" selected="selected">-- Select Pollutant--</option>
+	    </select>
+	    <br>
+	    <br>
+    <!--<select id="zipSel" size="1">
+        <option value="" selected="selected"> Select Zip</option>
+    </select>
+    -->
+	</form>
+
+	<input type="button" onclick="redirectToSpecificPage()" value="Get Map"></input>
+	
+	<h2> <b>Sustainability Index (V<sub>i</sub>) Maps</b> </h2>
+	<p> Sustainability Index is calculated as the net ecosystem service supply as supply of ecosystem service minus the demand, divided by the ecosystem service demand. </p>
+	<form name = "Vkmaps" id="Vkmaps">
+		<select id="sustainabilityindexSelection" size="1">
+			<option value="" selected="selected">--Select Map Source --</option>
+			</select>
+		 <br>
+		<br>
+		<select id="sustainabilityindexemissionsSelection" size = "1">
+			<option value="" selected="selected"> --Select Pollutant--</option>
+		</select>
+			<br>
+		<br>	
+	
+	</form>
+	
+	<input type="button" onclick="redirectToVkPage()" value="Get Map"></input>
+	
+	
+	<h2> <b> County-level Land Cover Maps </b> </h2>
+	<form name ="landcovermaps" id="landcovermaps">
+		<select id = "landcoverSelection" size="1">
+			<option value="" selected = "selected">--Select Land Cover Category --</option>
+			</select>
+			
+    		<br>
+		<br>
+		
+	</form>
+	
+	<input type="button" onclick="redirectToLand()" value="Get Map"></input>
+
+	<h2> <b> Cost Effectiveness of Vegetation vs Technological Options to Mitigate Emissions </b> </h2>
+	<p> This map shows the counties where cost effectiveness of conversion of grasslands and shrublands to county-average canopy cover is lower than cost of installing control equipment for the equivalent ecosystem service supply provided by trees in each county. </p>
+	<form name ="costeffmaps" id="costeffmaps">
+		<select id = "costeffSelection" size="1">
+			<option value="" selected = "selected">--Select Option --</option>
+			</select>
+			
+    		<br>
+		<br>
+		
+	</form>
+	
+	<input type="button" onclick="redirectToCost()" value="Get Map"></input>
+
+
+	
+	<br><br><br><br>
+	<div class="wrapper">
+    <button class="button" onclick="redirectToFips()">CLICK HERE FOR FIPS CODE MAP!</button>
+
+</div>
+	
+</body>
+	
+	
+	
+</html>
