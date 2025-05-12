@@ -4,7 +4,7 @@ type: "Presentation"
 collection: talks
 permalink: "https://neurips.cc/virtual/2024/100560"
 venue: "NeurIPS 2024. Tackling Climate Change with Machine Learning Workshop"
-date: 2025-12-15
+date: 2024-12-15
 location: "Vancouver, BC, Canada"
 ---
 
