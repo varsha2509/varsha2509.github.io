@@ -7,7 +7,6 @@ date: 2024-12-15
 venue: 'NeurIPS 2024. Tackling Climate Change with Machine Learning Workshop'
 paperurl: 'https://s3.us-east-1.amazonaws.com/climate-change-ai/papers/neurips2024/70/paper.pdf'
 citation: 
-
 ---
 
 
