@@ -61,6 +61,7 @@ const legend = L.control({ position: 'bottomright' });
 legend.onAdd = function (map) {
 const div = L.DomUtil.create('div', 'info legend');
 const grades = [0, 0.30, 0.60, 0.90, 1.3];
+const labels = [];
 
 for (let i = 0; i < grades.length - 1; i++) {
     const from = grades[i];
