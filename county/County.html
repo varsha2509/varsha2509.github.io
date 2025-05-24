@@ -3,63 +3,109 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Air pollution sequestration by different vegetation classes</title>
+  <title>Air pollution sequestration by vegetation</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-top px-4">
-
-<header class="w-full bg-white shadow mb-8 py-6 px-4">
-        <h1 class="text-3xl font-bold text-center text-gray-800">
-                Air pollution sequestration by different vegetation classes
-        </h1>
-</header>
-
-  <!-- Navigation Blocks -->
-  <h2 class="text-3xl font-bold text-center text-gray-800">🌾 Grasslands</h2>
-  <nav class="flex flex-wrap justify-center gap-4 mb-8">
-    <a href="UrbanGrassland.html" class="bg-blue-600 text-white px-6 py-4 rounded-lg shadow hover:bg-blue-700 transition">
-       Urban Areas
-    </a>
-    <a href="RuralGrassland.html" class="bg-blue-600 text-white px-6 py-4 rounded-lg shadow hover:bg-blue-700 transition">
-      Rural Areas
-    </a>
-    </a>
-</nav>
-
-<div class="max-w-4xl mx-auto space-y-8">
+<body class="bg-gray-100 min-h-screen px-4 py-8">
+  <!-- Header -->
+  <header class="w-full bg-white shadow py-6 px-4 mb-8 text-center">
+    <h1 class="text-3xl font-bold text-gray-800">
+      Air pollution sequestration by different vegetation classes
+    </h1>
+  </header>
   
-	<section class="bg-gray-100 rounded-lg shadow-md p-8 text-center">
-	  <h2 class="text-3xl font-bold text-gray-800 mb-4">🌳 Shrublands</h2>
-	  <p class="text-gray-600 text-lg">Coming soon!</p>
-	</section>
-  
-	<section class="bg-gray-100 rounded-lg shadow-md p-8 text-center">
-	  <h2 class="text-3xl font-bold text-gray-800 mb-4">🌲 Canopy</h2>
-	  <p class="text-gray-600 text-lg">Coming soon!</p>
-	</section>
-  
-  </div>
-  
-  <hr class="my-16 border-gray-300">
-
-
-  <!-- Text Section -->
-  <section class="max-w-3xl text-left text-gray-700">
-        <div class="mt-4 p-4 bg-gray bg-opacity-80 shadow-lg rounded text-gray-800">
-                <p class="text-lg">
-                <p> Vegetation helps remove air pollutants by absorbing gases through leaves and intercepting particulate matter. These nature-based solutions improve air quality and reduce health risks, particularly in urban areas where air pollution is higher. The ecosystem services provided by grasslands, shrublands and canopy highlight the importance of preserving these landscapes for air quality regulation. </p>
-                <p> The data in this work is based on modeled estimates of air pollutant sequestration by vegetation in rural and urban areas in each county, measured in grams per unit area of vegetation type. Methods and data sources are detailed in the study below, published by researchers from The Ohio State University, The Davey Institute, the University of Leeds, and the U.S. Forest Service. </p>
+  <!-- Two-Column Layout -->
+  <main class="flex flex-col lg:flex-row max-w-7xl mx-auto gap-8">
+    <!-- Left Column: Dropdowns -->
+    <aside class="w-full lg:w-1/3 bg-white p-6 shadow rounded-lg h-fit">
+      <h2 class="text-xl font-semibold mb-6 text-gray-800">Select Vegetation and Area type</h2>
+      
+      <div class="space-y-6">
+        <div>
+          <label for="vegetationClass" class="block text-gray-700 font-medium mb-2">Vegetation Class</label>
+          <select id="vegetationClass" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <option value="Grassland">🌾 Grassland</option>
+            <option value="Shrubland">🌳 Shrubland</option>
+            <option value="Canopy">🌲 Canopy</option>
+          </select>
         </div>
- </section>
- <section class="max-w-3xl text-center mt-10">
-        <h2 class="text-xl font-semibold text-gray-800 mb-2">Methods and Data Sources</h2>
-        <p class="text-gray-700">
-          <a href="https://www.itreetools.org/documents/82/GopalakrishnanEtAl2018_AirQualityHealthGrassShrubs.pdf" target="_blank" class="text-blue-600 underline hover:text-blue-800">
-                Air quality and human health impacts of grasslands and shrublands in the
-                United States (2018)
-          </a>.
-        </p>
-      </section>
-
+        
+        <fieldset>
+          <legend class="block text-gray-700 font-medium mb-3">Area Type</legend>
+          <div class="space-y-2">
+            <label class="flex items-center">
+              <input type="radio" name="areaType" value="Urban" class="mr-3 text-blue-600" checked />
+              <span class="text-gray-700">Urban</span>
+            </label>
+            <label class="flex items-center">
+              <input type="radio" name="areaType" value="Rural" class="mr-3 text-blue-600" />
+              <span class="text-gray-700">Rural</span>
+            </label>
+          </div>
+        </fieldset>
+        
+        <button onclick="navigateToPage()" class="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+          Go to Data
+        </button>
+      </div>
+    </aside>
+    
+    <!-- Right Column: Overview and Methods -->
+    <section class="w-full lg:w-2/3 space-y-6">
+      <!-- Overview Section -->
+      <div class="bg-white p-8 shadow rounded-lg">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Overview</h2>
+        <div class="space-y-4 text-gray-700">
+          <p class="text-lg leading-relaxed">
+            Vegetation helps remove air pollutants by absorbing gases through leaves and intercepting particulate matter. These nature-based solutions improve air quality and reduce health risks, particularly in urban areas where air pollution is higher.
+          </p>
+          <p class="text-lg leading-relaxed">
+            The data in this work is based on modeled estimates of air pollutant sequestration by vegetation in rural and urban areas in each county, measured in grams per unit area of vegetation type.
+          </p>
+          <p class="text-lg leading-relaxed mt-4">
+            The methodology involves modeling pollutant removal rates across different vegetation types, considering factors such as leaf surface area, stomatal conductance, and particle interception efficiency in both urban and rural environments.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Methods Section -->
+      <div class="bg-white p-8 shadow rounded-lg">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Methods and Data Sources</h2>
+        <div class="text-gray-700">
+          <p class="text-lg leading-relaxed">
+            This data is based on research from 
+            <li>
+                <a href="https://www.itreetools.org/documents/82/GopalakrishnanEtAl2018_AirQualityHealthGrassShrubs.pdf"
+                target="_blank"
+                class="text-blue-600 underline hover:text-blue-800 transition-colors">
+                Air quality and human health impacts of grasslands and shrublands in the United States (2018)
+                </a>.
+            </li>
+            <li>
+                <a href="https://research.fs.usda.gov/treesearch/52699"
+                target="_blank"
+                class="text-blue-600 underline hover:text-blue-800 transition-colors">
+                Comprehensive national database of tree effects on air quality and human health in the United States (2016)
+                </a>.
+            </li>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Navigation Script -->
+  <script>
+    function navigateToPage() {
+      const veg = document.getElementById('vegetationClass').value;
+      const area = document.querySelector('input[name="areaType"]:checked').value;
+      if (veg === "Canopy") {
+        window.location.href = "ComingSoon.html";
+      } else {
+        const target = `${area}${veg}.html`; // Example: UrbanGrassland.html
+        window.location.href = target;
+      }
+    }
+  </script>
 </body>
 </html>

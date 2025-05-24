@@ -8,7 +8,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 
-const colorScale = chroma.scale(['#a35866', '#ed0e38']).domain([0, 21.0]);
+const colorScale = chroma.scale(['#b0d4c6', '#0ec27c']).domain([0, 1.00]);
 
 function getColor(d) {
   if (d === null || d === undefined) return '#f2f2f2';  // no data color
@@ -32,7 +32,7 @@ function style(feature) {
 // Load county data
 let countyData = {};
 
-fetch('data/grasslandsRuralPM10.json')
+fetch('data/shrublandsUrbanSO2.json')
   .then(response => response.json())
   .then(data => {
     countyData = data;
@@ -46,7 +46,7 @@ fetch('data/grasslandsRuralPM10.json')
             const fips = feature.properties.GEOID;
             const data = countyData[fips];
             if (data) {
-              layer.bindPopup(`<strong>${data.name}</strong><br>PM10 Sequestration: ${data.value} g/m²`);
+              layer.bindPopup(`<strong>${data.name}</strong><br>SO₂ Sequestration: ${data.value} g/m²`);
             } else {
               layer.bindPopup(`<strong>${feature.properties.NAME}</strong><br>Data not available`);
             }
@@ -60,7 +60,7 @@ const legend = L.control({ position: 'bottomright' });
 
 legend.onAdd = function (map) {
 const div = L.DomUtil.create('div', 'info legend');
-const grades = [0, 5, 10, 15, 21];
+const grades = [0, 0.25, 0.50, 0.75, 1.00]; 
 const labels = [];
 
 for (let i = 0; i < grades.length - 1; i++) {
@@ -74,7 +74,7 @@ for (let i = 0; i < grades.length - 1; i++) {
     );
 }
 
-div.innerHTML = `<strong>PM10 Sequestration<br>(g/m²)</strong><br>` + labels.join('<br>');
+div.innerHTML = `<strong>SO2 Sequestration<br>(g/m²)</strong><br>` + labels.join('<br>');
 return div;
 };
 

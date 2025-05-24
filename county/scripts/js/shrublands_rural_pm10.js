@@ -8,7 +8,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 
-const colorScale = chroma.scale(['#a35866', '#ed0e38']).domain([0, 21.0]);
+const colorScale = chroma.scale(['#c7a98d', '#e87b15']).domain([0, 21.0]);
 
 function getColor(d) {
   if (d === null || d === undefined) return '#f2f2f2';  // no data color
@@ -32,7 +32,7 @@ function style(feature) {
 // Load county data
 let countyData = {};
 
-fetch('data/grasslandsRuralPM10.json')
+fetch('data/shrublandsRuralPM10.json')
   .then(response => response.json())
   .then(data => {
     countyData = data;
